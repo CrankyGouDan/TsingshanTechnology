@@ -18,5 +18,6 @@ version: ${project.version}
 api-version: 1.14
 
 ## This is required and marks Slimefun as a plugin dependency.
+softdepend: [mcMMO, NoCheatPlus]
 depend:
 - Slimefun

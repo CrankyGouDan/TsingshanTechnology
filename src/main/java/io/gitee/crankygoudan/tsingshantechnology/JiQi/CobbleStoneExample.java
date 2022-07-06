@@ -1,5 +1,6 @@
-package io/gitee/crankygoudan/tsingshantechnology/JiQi;
+package io.gitee.crankygoudan.tsingshantechnology.JiQi;
 
+import io.gitee.crankygoudan.tsingshantechnology.Jieko.Cobblestone;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
@@ -17,7 +18,7 @@ public class CobbleStoneExample extends Cobblestone {
      */
     @Override
     public int getSpeed() {
-        return 1;
+        return 2;
     }
 
     /**
@@ -26,7 +27,7 @@ public class CobbleStoneExample extends Cobblestone {
      */
     @Override
     public int getCapacity() {
-        return 10;
+        return 512;
     }
 
     /**
@@ -36,7 +37,7 @@ public class CobbleStoneExample extends Cobblestone {
      */
     @Override
     public int getEnergyConsumption() {
-        return 5;
+        return 256;
     }
 
     /**
@@ -44,7 +45,7 @@ public class CobbleStoneExample extends Cobblestone {
      */
     @Override
     public String getInvTitle() {
-        return "TEST";
+        return "&b原石制造机";
     }
 
     /**
@@ -53,11 +54,10 @@ public class CobbleStoneExample extends Cobblestone {
     @Override
     public void registerDefaultRecipes() {
         //这行代码注册了一个配方，即每过1秒生成一个圆石
-        this.registerRecipe(1, Material.STONE);
+        registerRecipe(1, new ItemStack(Material.COBBLESTONE, 64));
+
 
         //配方可以多次注册，即可以写多行注册子句，例如
-        this.registerRecipe(3,Material.COMMAND_BLOCK);
-        this.registerRecipe(2,Material.STONE_BUTTON);
         //现在，这台机器便有了3个配方，即每过1秒产出一个石头，每过两秒产出一个石头按钮，每过3秒产出一个
         //请注意，注册时第一个参数对应的是第二个参数的产出时间，且物品产出随机，也就是说，按照上述注册方法，可能会发生以下情况：
         //开启机器，过了1秒，产出了一块石头，又过了2秒，产出了一块石头按钮

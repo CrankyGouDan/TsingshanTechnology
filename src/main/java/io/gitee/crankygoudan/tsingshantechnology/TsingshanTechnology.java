@@ -1,9 +1,17 @@
 package io.gitee.crankygoudan.tsingshantechnology;
 
 import io.gitee.crankygoudan.tsingshantechnology.Generator.GreenGenerator;
+import io.gitee.crankygoudan.tsingshantechnology.HuoYun.EnderChestExtractionNode_1;
+import io.gitee.crankygoudan.tsingshantechnology.HuoYun.EnderChestInsertionNode_2;
+import io.gitee.crankygoudan.tsingshantechnology.JiQi.*;
+import io.gitee.crankygoudan.tsingshantechnology.Jieko.KeyedCrafterListener;
+import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
+import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.groups.NestedItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.groups.SubItemGroup;
+import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
+import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.skins.PlayerHead;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.skins.PlayerSkin;
 import org.bukkit.Material;
@@ -11,17 +19,18 @@ import org.bukkit.NamespacedKey;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
-import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
-import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
-import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
+import static io.gitee.crankygoudan.tsingshantechnology.items.ENDER_CHEST_EXTRACTION_NODE_1;
+import static io.gitee.crankygoudan.tsingshantechnology.items.ENDER_CHEST_INSERTION_NODE_2;
 
 public class TsingshanTechnology extends JavaPlugin implements SlimefunAddon {
 
+    private static TsingshanTechnology instance;
     private NestedItemGroup nestedItemGroup;
     private ItemGroup fadianjiGroup;
     private ItemGroup jiqiGroup;
     private ItemGroup cailioaGroup;
+    private ItemGroup gjGroup;
+    private ItemGroup yszjGroup;
 
     private void registerItems() {
         //A
@@ -39,6 +48,12 @@ public class TsingshanTechnology extends JavaPlugin implements SlimefunAddon {
         cailioaGroup = new SubItemGroup (new NamespacedKey(this, "qing_shan_cailiao"), nestedItemGroup,  new CustomItemStack( PlayerHead.getItemStack(PlayerSkin.fromHashCode("9774928d51298e7d66aee92aa5d33e442bd4e037324463ff5a5440dce9e13f65")),
                 "§x§6§6§0§0§f§f材" +
                         "§x§9§9§0§0§f§f料", "", "&a> 点击查看"));
+        gjGroup = new SubItemGroup (new NamespacedKey(this, "qing_shan_gongju"), nestedItemGroup,  new CustomItemStack (Material.SHEARS,
+                "§x§0§0§a§a§c§c工" + "§x§0§0§8§8§f§f具", "", "&a> 点击查看"));
+        yszjGroup = new SubItemGroup (new NamespacedKey(this, "qing_shan_yunshu"), nestedItemGroup,  new CustomItemStack (Material.BARREL, "§x§f§f§f§f§0§0运" +
+                "§x§c§c§f§f§0§0输" +
+                "§x§8§8§f§f§0§0组" +
+                "§x§4§4§f§f§0§0件", "", "&a> 点击查看"));
 
     }
 
@@ -46,17 +61,13 @@ public class TsingshanTechnology extends JavaPlugin implements SlimefunAddon {
     @Override
     public void onEnable() {
         // 从您的 config.yml 中读取一些内容
-        registerItems();
+
         /*
          * 1. 创建一个新的类别
          * 该类别将使用以下 ItemStack
          */
-        //子
-
-
         // 为您的类别提供一个唯一的 ID。
-
-
+        registerItems();
         /*
          * 3. 创建配方
          * 配方是一个长度为 9 的 ItemStack 数组。
@@ -71,7 +82,48 @@ public class TsingshanTechnology extends JavaPlugin implements SlimefunAddon {
                 new ItemStack(Material.OAK_LEAVES), new ItemStack(Material.OAK_LEAVES), new ItemStack(Material.OAK_LEAVES)
         };
         //机器配方：
-
+        ItemStack[] cobbleStoneExampleRecipe = {
+                null, null, null,
+                null, null, null,
+                null, null, null
+        };
+        ItemStack[] yuanbangongzuoxiangRecipe = {
+                null, null, null,
+                null, null, null,
+                null, null, null
+        };
+        ItemStack[] zengqiangxinggongzuoxiangRecipe = {
+                null, null, null,
+                null, null, null,
+                null, null, null
+        };
+        ItemStack[] yuangujitanRecipe = {
+                null, null, null,
+                null, null, null,
+                null, null, null
+        };
+        ItemStack[] kuijiaduanzaoxaingRecipe = {
+                null, null, null,
+                null, null, null,
+                null, null, null
+        };
+        ItemStack[] mofagongzuoxiangRecipe = {
+                null, null, null,
+                null, null, null,
+                null, null, null
+        };
+        //工具配方:
+        //运输配方:
+        ItemStack[] enderChestExtractionNode_1Recipe = {
+                SlimefunItems.ENDER_LUMP_2, SlimefunItems.BASIC_CIRCUIT_BOARD, SlimefunItems.ENDER_LUMP_2,
+                new ItemStack(Material.DISPENSER), new ItemStack(Material.ENDER_PEARL), new ItemStack(Material.HOPPER),
+                SlimefunItems.ENDER_LUMP_2, SlimefunItems.BASIC_CIRCUIT_BOARD, SlimefunItems.ENDER_LUMP_2
+        };
+        ItemStack[] enderChestInsertionNode_2Recipe = {
+                SlimefunItems.ENDER_LUMP_2, SlimefunItems.BASIC_CIRCUIT_BOARD, SlimefunItems.ENDER_LUMP_2,
+                new ItemStack(Material.HOPPER), new ItemStack(Material.ENDER_PEARL), new ItemStack(Material.DISPENSER),
+                SlimefunItems.ENDER_LUMP_2, SlimefunItems.BASIC_CIRCUIT_BOARD, SlimefunItems.ENDER_LUMP_2
+        };
 
         /*
          * 4. 注册项目
@@ -83,14 +135,35 @@ public class TsingshanTechnology extends JavaPlugin implements SlimefunAddon {
         //发电机的注册项目列表
         GreenGenerator greenGenerator = new GreenGenerator(fadianjiGroup, items.GREEN_GENERATOR, RecipeType.ENHANCED_CRAFTING_TABLE, greenGeneratorRecipe);
 
-        //发电机的项目项目_2
+        //机器的的注册项目列表
+        CobbleStoneExample cobbleStoneExample = new CobbleStoneExample(jiqiGroup, items.YUANSHI_ZHIZAOJ, RecipeType.NULL, cobbleStoneExampleRecipe);
+        Yuanbangongzuoxiang yuanbangongzuoxiang = new Yuanbangongzuoxiang (jiqiGroup, items.ZDYBGZX, RecipeType.NULL,  yuanbangongzuoxiangRecipe);
+        Zengqiangxinggongzuoxiang zengqiangxinggongzuoxiang = new Zengqiangxinggongzuoxiang (jiqiGroup, items.ZDZQXGZX, RecipeType.NULL,  zengqiangxinggongzuoxiangRecipe);
+        Yuangujitan yuangujitan = new Yuangujitan (jiqiGroup, items.ZDYGJT, RecipeType.NULL, yuangujitanRecipe);
+        Kuijiaduanzaoxaing kuijiaduanzaoxaing = new Kuijiaduanzaoxaing (jiqiGroup, items.ZDKJDZX, RecipeType.NULL, kuijiaduanzaoxaingRecipe);
+        Mofagongzuoxiang mofagongzuoxiang = new Mofagongzuoxiang (jiqiGroup, items.ZDMFGZX, RecipeType.NULL, mofagongzuoxiangRecipe);
+        //工具的的注册项目列表
+        //运输组件的的注册项目列表
+        EnderChestExtractionNode_1 enderChestExtractionNode_1 = new EnderChestExtractionNode_1 (yszjGroup, ENDER_CHEST_EXTRACTION_NODE_1, RecipeType.ENHANCED_CRAFTING_TABLE, enderChestExtractionNode_1Recipe);
+        EnderChestInsertionNode_2 enderChestInsertionNode_2 = new EnderChestInsertionNode_2 (yszjGroup, ENDER_CHEST_INSERTION_NODE_2, RecipeType.ENHANCED_CRAFTING_TABLE, enderChestInsertionNode_2Recipe);
+
+        //发电机的项目_2
         greenGenerator.register(this);
-
-
-
+        //机器的项目项目_2
+        cobbleStoneExample.register(this);
+        yuanbangongzuoxiang.register ( this );
+        yuangujitan.register ( this );
+        zengqiangxinggongzuoxiang.register ( this );
+        kuijiaduanzaoxaing.register ( this );
+        mofagongzuoxiang.register ( this );
+        //运输组件的项目_2
+        enderChestExtractionNode_1.register(this);
+        enderChestInsertionNode_2.register(this);
+        //工具的项目_2
 
 
         // 我们的项目现已注册
+        getServer().getPluginManager().registerEvents(new KeyedCrafterListener (), this);
 
     }
 

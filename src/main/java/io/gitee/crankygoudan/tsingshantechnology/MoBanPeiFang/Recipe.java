@@ -1,4 +1,4 @@
-package io.gitee.crankygoudan.tsingshantechnology.MoBanPeiFang
+package io.gitee.crankygoudan.tsingshantechnology.MoBanPeiFang;
 
 import org.bukkit.inventory.ItemStack;
 
