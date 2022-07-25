@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.github.Slimefun:Slimefun4:RC-32">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/Slimefun/Slimefun4/RC-32/Slimefun4-RC-32.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/Slimefun/Slimefun4/RC-32/Slimefun4-RC-32-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/Slimefun/Slimefun4/RC-32/Slimefun4-RC-32-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,168 @@
+package io.gitee.crankygoudan.tsingshantechnology.machines.yunshu;
+
+import io.gitee.crankygoudan.tsingshantechnology.jieko.Utils;
+import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
+import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
+import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
+import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
+import io.github.thebusybiscuit.slimefun4.core.handlers.BlockPlaceHandler;
+import io.github.thebusybiscuit.slimefun4.core.handlers.BlockUseHandler;
+import io.github.thebusybiscuit.slimefun4.implementation.items.magical.talismans.Talisman;
+import io.github.thebusybiscuit.slimefun4.libraries.paperlib.PaperLib;
+import me.mrCookieSlime.CSCoreLibPlugin.Configuration.Config;
+import me.mrCookieSlime.Slimefun.Objects.handlers.BlockTicker;
+import me.mrCookieSlime.Slimefun.api.BlockStorage;
+import org.bukkit.Bukkit;
+import org.bukkit.Material;
+import org.bukkit.Tag;
+import org.bukkit.block.*;
+import org.bukkit.entity.Player;
+import org.bukkit.event.block.BlockPlaceEvent;
+import org.bukkit.inventory.Inventory;
+import org.bukkit.inventory.InventoryHolder;
+import org.bukkit.inventory.ItemStack;
+
+import javax.annotation.Nonnull;
+import java.util.UUID;
+
+/**
+ * This {@link SlimefunItem} transfers items from the facing
+ * {@link EnderChest} to the {@link Container} behind it
+ *
+ * @author DAIDAI
+ */
+public class Moyingxiangyunshujiedian_1 extends SlimefunItem {
+
+    private static final Material material = Material.ENDER_CHEST;
+
+    public Moyingxiangyunshujiedian_1(ItemGroup category, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe) {
+        super(category, item, recipeType, recipe);
+
+        addItemHandler(onPlace());
+        addItemHandler(onInteract());
+    }
+
+    @Override
+    public void preRegister() {
+        this.addItemHandler(new BlockTicker() {
+            public void tick(Block b, SlimefunItem sf, Config data) {
+                Moyingxiangyunshujiedian_1.this.tick(b);
+            }
+
+            public boolean isSynchronized() {
+                return true;
+            }
+        });
+    }
+
+    private void tick(@Nonnull Block b) {
+        ItemStack transferItemStack;
+        BlockFace face;
+
+        if (b.getRelative(BlockFace.NORTH).getType() == material) {
+            face = BlockFace.SOUTH;
+
+        } else if (b.getRelative(BlockFace.SOUTH).getType() == material) {
+            face = BlockFace.NORTH;
+
+
+        } else if (b.getRelative(BlockFace.EAST).getType() == material) {
+            face = BlockFace.WEST;
+
+
+        } else if (b.getRelative(BlockFace.WEST).getType() == material) {
+            face = BlockFace.EAST;
+
+        } else {
+            return;
+        }
+
+        BlockState state = PaperLib.getBlockState(b.getRelative(face), false).getState();
+
+        if (state instanceof InventoryHolder) {
+            Player p = Bukkit.getOfflinePlayer(UUID.fromString(BlockStorage.getLocationInfo(b.getLocation(), "1owner"))).getPlayer();
+
+            // Ender chest null check necessary because Bukkit yes.
+            if (p != null) {
+
+                boolean enderValid = false;
+                boolean containerValid = false;
+                int enderIndex = -1;
+                int containerIndex = -1;
+
+                Inventory enderInv = p.getEnderChest();
+
+                for (int i = 0; i < enderInv.getSize(); i++) {
+
+                    ItemStack enderItem = enderInv.getItem(i);
+
+                    // Ignore null items
+                    if (enderItem == null) {
+                        continue;
+                    }
+
+                    // Prevent putting shulkers in shulkers
+                    if (state instanceof ShulkerBox && !Tag.SHULKER_BOXES.isTagged(enderItem.getType())) {
+                        continue;
+                    }
+
+                    SlimefunItem sfEnderItem = SlimefunItem.getByItem(enderItem);
+
+                    // Ignore Talismen
+                    if (sfEnderItem instanceof Talisman) {
+                        continue;
+                    }
+
+                    enderIndex = i;
+                    enderValid = true;
+                    break;
+                }
+
+                Inventory containerInv = ((InventoryHolder) state).getInventory();
+
+                for (int i = 0; i < containerInv.getSize(); i++) {
+
+                    if (containerInv.getItem(i) == null) {
+                        containerIndex = i;
+                        containerValid = true;
+                        break;
+                    }
+                }
+
+                if (enderValid && containerValid) {
+                    transferItemStack = enderInv.getItem(enderIndex);
+                    enderInv.setItem(enderIndex, null);
+
+                    containerInv.setItem(containerIndex, transferItemStack);
+                }
+            }
+        }
+    }
+
+    private BlockPlaceHandler onPlace() {
+        return new BlockPlaceHandler(false) {
+            @Override
+            public void onPlayerPlace(@Nonnull BlockPlaceEvent e) {
+                Player p = e.getPlayer();
+                Block b = e.getBlock();
+
+                if (!e.isCancelled()) {
+                    BlockStorage.addBlockInfo(b, "1owner", p.getUniqueId().toString());
+                    BlockStorage.addBlockInfo(b, "1playername", p.getDisplayName());
+                    Utils.send(p, "&a末地货运节点已绑定到ID为" + p.getDisplayName()
+                        + " &7(UUID: " + p.getUniqueId() + ")");
+                }
+            }
+        };
+    }
+
+    private BlockUseHandler onInteract() {
+        return e -> {
+            Player p = e.getPlayer();
+            Block b = e.getClickedBlock().get();
+            Utils.send(p, "&e此末地货运节点是属于ID为" +
+                BlockStorage.getLocationInfo(b.getLocation(), "1playername")
+                + " &7(UUID: " + BlockStorage.getLocationInfo(b.getLocation(), "1owner") + ")");
+        };
+    }
+}
