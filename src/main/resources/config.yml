@@ -1,2 +1,6 @@
 options:
   auto-update: true
+armor-particle-delay-in-seconds: 2
+
+# 禁用后部分物品的配方会改变，部分物品会被移除
+custom-mobs: true
