@@ -9,6 +9,7 @@ import io.gitee.crankygoudan.tsingshantechnology.machines.jiqiMoBan.YuanShiBaoFa
 import io.gitee.crankygoudan.tsingshantechnology.utils.C;
 import io.gitee.crankygoudan.tsingshantechnology.utils.T;
 import io.gitee.crankygoudan.tsingshantechnology.utils.Y;
+import io.github.mooy1.infinitylib.machines.MachineBlock;
 import io.github.mooy1.infinitylib.machines.MachineLore;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
@@ -176,7 +177,83 @@ public class QingShanJiQi {
         Y.colorPseudorandomString("可以转化一些材料"),
         MachineLore.energyBuffer(256),
         MachineLore.energyPerSecond(16));
-    public static final SlimefunItemStack QS_NA_MI_TAN_WEI_SU1 = QS_NA_MI_TAN_WEI_SU;
+    public static final SlimefunItemStack QS_CHAO_JI_FEN_SUI_JI_I = new SlimefunItemStack (
+        "QS_CHAO_JI_FEN_SUI_JI_I",
+        Material.FURNACE,
+        Y.colorPseudorandomString ("超级粉碎机") + " " + Y.colorPseudorandomString("I"),
+        Y.colorPseudorandomString(" "),
+        MachineLore.speed(2),
+        MachineLore.energyBuffer(5000),
+        MachineLore.energyPerSecond(1728));
+    public static final SlimefunItemStack QS_CHAO_JI_FEN_SUI_JI_II = new SlimefunItemStack (
+        "QS_CHAO_JI_FEN_SUI_JI_II",
+        Material.FURNACE,
+        Y.colorPseudorandomString ("超级粉碎机") + " " + Y.colorPseudorandomString("II"),
+        Y.colorPseudorandomString(" "),
+        MachineLore.speed(8),
+        MachineLore.energyBuffer(10000),
+        MachineLore.energyPerSecond(3456));
+    public static final SlimefunItemStack QS_CHAO_JI_FEN_SUI_JI_III = new SlimefunItemStack (
+        "QS_CHAO_JI_FEN_SUI_JI_III",
+        Material.FURNACE,
+        Y.colorPseudorandomString ("超级粉碎机") + " " + Y.colorPseudorandomString("III"),
+        Y.colorPseudorandomString(" "),
+        MachineLore.speed(32),
+        MachineLore.energyBuffer(20000),
+        MachineLore.energyPerSecond(7200));
+    public static final SlimefunItemStack QS_CHAO_JI_FEN_SUI_JI_IV = new SlimefunItemStack (
+        "QS_CHAO_JI_FEN_SUI_JI_IV",
+        Material.FURNACE,
+        Y.colorPseudorandomString ("超级粉碎机") + " " + Y.colorPseudorandomString("IV"),
+        Y.colorPseudorandomString(" "),
+        MachineLore.speed(64),
+        MachineLore.energyBuffer(100000),
+        MachineLore.energyPerSecond(36000));
+    public static final SlimefunItemStack QS_YUAN_SU_YA_SUO_JI = new SlimefunItemStack (
+        "QS_YUAN_SU_YA_SUO_JI",
+        Material.TUBE_CORAL_BLOCK,
+        Y.colorPseudorandomString ("元素压缩机") + " " + Y.colorPseudorandomString(" "),
+        Y.colorPseudorandomString(" "),
+        Y.colorPseudorandomString("必须放在水中"),
+        MachineLore.speed(64),
+        MachineLore.energyBuffer(30000),
+        MachineLore.energyPerSecond(8787));
+    public static final SlimefunItemStack QS_XI_PIA_JI_HUO_QI_V1 = new SlimefunItemStack (
+        "QS_XI_PIA_JI_HUO_QI_V1",
+        Material.SMITHING_TABLE,
+        Y.colorPseudorandomString ("普通芯片激活机") + " " + Y.colorPseudorandomString(" "),
+        Y.colorPseudorandomString(" "),
+        Y.colorPseudorandomString("普通芯片产物);"),
+        MachineLore.speed(2),
+        MachineLore.energyBuffer(10000),
+        MachineLore.energyPerSecond(4555));
+    public static final SlimefunItemStack QS_XI_PIA_JI_HUO_QI_V2 = new SlimefunItemStack (
+        "QS_XI_PIA_JI_HUO_QI_V2",
+        Material.SMITHING_TABLE,
+        Y.colorPseudorandomString ("高级芯片激活机") + " " + Y.colorPseudorandomString(" "),
+        Y.colorPseudorandomString(" "),
+        Y.colorPseudorandomString("高级芯片产物);"),
+        MachineLore.speed(8),
+        MachineLore.energyBuffer(20000),
+        MachineLore.energyPerSecond(7999));
+    public static final SlimefunItemStack QS_XI_PIA_JI_HUO_QI_V3 = new SlimefunItemStack (
+        "QS_XI_PIA_JI_HUO_QI_V3",
+        Material.SMITHING_TABLE,
+        Y.colorPseudorandomString ("神级芯片激活机") + " " + Y.colorPseudorandomString(" "),
+        Y.colorPseudorandomString(" "),
+        Y.colorPseudorandomString("神级芯片产物);"),
+        MachineLore.speed(32),
+        MachineLore.energyBuffer(30000),
+        MachineLore.energyPerSecond(12345));
+    public static final SlimefunItemStack QS_XI_PIA_JI_HUO_QI_V4 = new SlimefunItemStack (
+        "QS_XI_PIA_JI_HUO_QI_V4",
+        Material.SMITHING_TABLE,
+        Y.colorPseudorandomString ("究极芯片激活机") + " " + Y.colorPseudorandomString(" "),
+        Y.colorPseudorandomString(" "),
+        Y.colorPseudorandomString("究极芯片产物);"),
+        MachineLore.speed(64),
+        MachineLore.energyBuffer(80000),
+        MachineLore.energyPerSecond(36000));
 
 
     public static void setup(TsingshanTechnology qs) {
@@ -213,6 +290,29 @@ public class QingShanJiQi {
             setProcessingSpeed(1).
             setCapacity(100000)
             .setEnergyConsumption(36000).register(qs);
+
+
+
+        new ChaoJiFenSuiJi_V1 ( C.QS_JQ, QS_CHAO_JI_FEN_SUI_JI_I, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+            SlimefunItems.ELECTRIC_ORE_GRINDER_3, QS_GANG_JIN_HE_XIN, SlimefunItems.ELECTRIC_ORE_GRINDER_3,
+            QS_QIANG_HUA_DIN, SlimefunItems.ENERGIZED_CAPACITOR, QS_QIANG_HUA_DIN,
+            SlimefunItems.ELECTRIC_ORE_GRINDER_3, QS_GANG_JIN_HE_XIN, SlimefunItems.ELECTRIC_ORE_GRINDER_3
+        } ).register ( qs );
+        new ChaoJiFenSuiJi_V2 ( C.QS_JQ, QS_CHAO_JI_FEN_SUI_JI_II, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+            QS_CHAO_JI_FEN_SUI_JI_I, QS_GANG_JIN_HE_XIN, QS_CHAO_JI_FEN_SUI_JI_I,
+            QS_QIANG_HUA_BAN, QS_GAO_JIE_XIA_JIE, QS_QIANG_HUA_BAN,
+            QS_CHAO_JI_FEN_SUI_JI_I, QS_GANG_JIN_HE_XIN, QS_CHAO_JI_FEN_SUI_JI_I
+        } ).register ( qs );
+        new ChaoJiFenSuiJi_V3 ( C.QS_JQ, QS_CHAO_JI_FEN_SUI_JI_III, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+            QS_CHAO_JI_FEN_SUI_JI_II, QS_GANG_JIN_HE_XIN, QS_CHAO_JI_FEN_SUI_JI_II,
+            QS_QIANG_HUA_BAN, QS_GAO_JIE_XIA_JIE, QS_QIANG_HUA_BAN,
+            QS_CHAO_JI_FEN_SUI_JI_II, QS_GANG_JIN_HE_XIN, QS_CHAO_JI_FEN_SUI_JI_II
+        } ).register ( qs );
+        new ChaoJiFenSuiJi_V4 ( C.QS_JQ, QS_CHAO_JI_FEN_SUI_JI_IV, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+            QS_CHAO_JI_FEN_SUI_JI_III, QS_GANG_JIN_HE_XIN, QS_CHAO_JI_FEN_SUI_JI_III,
+            QS_QIANG_HUA_BAN, QS_GAO_JIE_XIA_JIE, QS_QIANG_HUA_BAN,
+            QS_CHAO_JI_FEN_SUI_JI_III, QS_GANG_JIN_HE_XIN, QS_CHAO_JI_FEN_SUI_JI_III
+        } ).register ( qs );
         new QianYingHe ( C.QS_JQ, QS_QIAN_YING_HE_BAO_FA_QI, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
             QS_JIN_SHU_PAO_MO, QS_JIN_SHU_PAO_MO, QS_JIN_SHU_PAO_MO,
             QS_JIN_SHU_PAO_MO, QS_NA_MI_DIAN, QS_JIN_SHU_PAO_MO,
@@ -236,7 +336,7 @@ public class QingShanJiQi {
         }).material( Material.COBBLESTONE).speed(1).energyPerTick(520).register(qs);
 
         new YuanShiBaoFaQiMoBan ( C.QS_JQ, QS_YUAN_SHI_BAO_FA_QI_II, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
-            QS_SAN_YUAN_CUI_HUA_QI, QS_NA_MI_TAN_WEI_SU1, QS_SAN_YUAN_CUI_HUA_QI,
+            QS_SAN_YUAN_CUI_HUA_QI, QS_NA_MI_TAN_WEI_SU, QS_SAN_YUAN_CUI_HUA_QI,
             new ItemStack ( Material.WATER_BUCKET ), QS_DAIDAI_DE_HONG_SHI_KUAI, new ItemStack ( Material.LAVA_BUCKET ),
             QS_SAN_YUAN_CUI_HUA_QI, QS_YUAN_SHI_BAO_FA_QI_I, QS_SAN_YUAN_CUI_HUA_QI
         }).material( Material.COBBLESTONE).speed(4).energyPerTick(3500).register(qs);
@@ -314,13 +414,106 @@ public class QingShanJiQi {
             new ItemStack ( Material.MAGMA_BLOCK ), SlimefunItems.MEDIUM_CAPACITOR, new ItemStack ( Material.MAGMA_BLOCK )
         }).register ( qs );
 
+        new MachineBlock ( C.QS_JQ, QS_YUAN_SU_YA_SUO_JI, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
+            QS_YI_JIE_YUAN_SU_JIE_JING, QS_ER_JIE_YUAN_SU_JIE_JING,QS_SAN_JIE_YUAN_SU_JIE_JING,
+            QS_QIANG_HUA_BAN, SlimefunItems.ENERGIZED_CAPACITOR,QS_QIANG_HUA_BAN,
+            QS_SI_JIE_YUAN_SU_JIE_JING, QS_GAO_JIE_XIA_JIE,QS_WU_JIE_YUAN_SU_JIE_JING,
+        }).addRecipe(new SlimefunItemStack( QS_YI_JIE_NO_SUO_TIE, 7), new ItemStack(Material.IRON_INGOT, 63))
+            .addRecipe(new SlimefunItemStack(QS_YI_JIE_NO_SUO_JIN, 7),new ItemStack(Material.GOLD_INGOT, 63))
+            .addRecipe(new SlimefunItemStack(QS_YI_JIE_NO_SUO_TONG, 7), new SlimefunItemStack(SlimefunItems.COPPER_INGOT, 63))
+            .addRecipe(new SlimefunItemStack(QS_YI_JIE_NO_SUO_MEI, 7), new SlimefunItemStack(SlimefunItems.MAGNESIUM_INGOT, 63))
+            .addRecipe(new SlimefunItemStack(QS_YI_JIE_NO_SUO_LV, 7), new SlimefunItemStack(SlimefunItems.ALUMINUM_INGOT, 63))
+            .addRecipe(new SlimefunItemStack(QS_YI_JIE_NO_SUO_XI, 7), new SlimefunItemStack(SlimefunItems.TIN_INGOT, 63))
+            .addRecipe(new SlimefunItemStack(QS_YI_JIE_NO_SUO_YIN, 7), new SlimefunItemStack(SlimefunItems.SILVER_INGOT, 63))
+            .addRecipe(new SlimefunItemStack(QS_YI_JIE_NO_SUO_XIN, 7), new SlimefunItemStack(SlimefunItems.ZINC_INGOT, 63))
+            .addRecipe(new SlimefunItemStack(QS_YI_JIE_NO_SUO_QIAN, 7), new SlimefunItemStack(SlimefunItems.LEAD_INGOT, 63))
+            .addRecipe(new SlimefunItemStack(QS_ER_JIE_NO_SUO_QIAN, 7), new SlimefunItemStack(QS_YI_JIE_NO_SUO_QIAN, 63))
+            .addRecipe(new SlimefunItemStack(QS_ER_JIE_NO_SUO_XIN, 7), new SlimefunItemStack(QS_YI_JIE_NO_SUO_XIN, 63))
+            .addRecipe(new SlimefunItemStack(QS_ER_JIE_NO_SUO_YIN, 7), new SlimefunItemStack(QS_YI_JIE_NO_SUO_YIN, 63))
+            .addRecipe(new SlimefunItemStack(QS_ER_JIE_NO_SUO_XI, 7), new SlimefunItemStack(QS_YI_JIE_NO_SUO_XI, 63))
+            .addRecipe(new SlimefunItemStack(QS_ER_JIE_NO_SUO_LV, 7), new SlimefunItemStack(QS_YI_JIE_NO_SUO_LV, 63))
+            .addRecipe(new SlimefunItemStack(QS_ER_JIE_NO_SUO_MEI, 7), new SlimefunItemStack(QS_YI_JIE_NO_SUO_MEI, 63))
+            .addRecipe(new SlimefunItemStack(QS_ER_JIE_NO_SUO_TONG, 7), new SlimefunItemStack(QS_YI_JIE_NO_SUO_TONG, 63))
+            .addRecipe(new SlimefunItemStack(QS_ER_JIE_NO_SUO_JIN, 7), new SlimefunItemStack(QS_YI_JIE_NO_SUO_JIN, 63))
+            .addRecipe(new SlimefunItemStack(QS_ER_JIE_NO_SUO_TIE, 7), new SlimefunItemStack(QS_YI_JIE_NO_SUO_TIE, 63))
+            .addRecipe(new SlimefunItemStack(QS_SAN_JIE_NO_SUO_QIAN, 7), new SlimefunItemStack(QS_SAN_JIE_NO_SUO_QIAN, 63))
+            .addRecipe(new SlimefunItemStack(QS_SAN_JIE_NO_SUO_XIN, 7), new SlimefunItemStack(QS_SAN_JIE_NO_SUO_XIN, 63))
+            .addRecipe(new SlimefunItemStack(QS_SAN_JIE_NO_SUO_YIN, 7), new SlimefunItemStack(QS_SAN_JIE_NO_SUO_YIN, 63))
+            .addRecipe(new SlimefunItemStack(QS_SAN_JIE_NO_SUO_XI, 7), new SlimefunItemStack(QS_SAN_JIE_NO_SUO_XI, 63))
+            .addRecipe(new SlimefunItemStack(QS_SAN_JIE_NO_SUO_LV, 7), new SlimefunItemStack(QS_SAN_JIE_NO_SUO_LV, 63))
+            .addRecipe(new SlimefunItemStack(QS_SAN_JIE_NO_SUO_MEI, 7), new SlimefunItemStack(QS_SAN_JIE_NO_SUO_MEI, 63))
+            .addRecipe(new SlimefunItemStack(QS_SAN_JIE_NO_SUO_TONG, 7), new SlimefunItemStack(QS_SAN_JIE_NO_SUO_TONG, 63))
+            .addRecipe(new SlimefunItemStack(QS_SAN_JIE_NO_SUO_JIN, 7), new SlimefunItemStack(QS_SAN_JIE_NO_SUO_JIN, 63))
+            .addRecipe(new SlimefunItemStack(QS_SAN_JIE_NO_SUO_TIE, 7), new SlimefunItemStack(QS_SAN_JIE_NO_SUO_TIE, 63))
+            .addRecipe(new SlimefunItemStack(QS_SI_JIE_NO_SUO_QIAN, 7), new SlimefunItemStack(QS_SI_JIE_NO_SUO_QIAN, 63))
+            .addRecipe(new SlimefunItemStack(QS_SI_JIE_NO_SUO_XIN, 7), new SlimefunItemStack(QS_SI_JIE_NO_SUO_XIN, 63))
+            .addRecipe(new SlimefunItemStack(QS_SI_JIE_NO_SUO_YIN, 7), new SlimefunItemStack(QS_SI_JIE_NO_SUO_YIN, 63))
+            .addRecipe(new SlimefunItemStack(QS_SI_JIE_NO_SUO_XI, 7), new SlimefunItemStack(QS_SI_JIE_NO_SUO_XI, 63))
+            .addRecipe(new SlimefunItemStack(QS_SI_JIE_NO_SUO_LV, 7), new SlimefunItemStack(QS_SI_JIE_NO_SUO_LV, 63))
+            .addRecipe(new SlimefunItemStack(QS_SI_JIE_NO_SUO_MEI, 7), new SlimefunItemStack(QS_SI_JIE_NO_SUO_MEI, 63))
+            .addRecipe(new SlimefunItemStack(QS_SI_JIE_NO_SUO_TONG, 7), new SlimefunItemStack(QS_SI_JIE_NO_SUO_TONG, 63))
+            .addRecipe(new SlimefunItemStack(QS_SI_JIE_NO_SUO_JIN, 7), new SlimefunItemStack(QS_SI_JIE_NO_SUO_JIN, 63))
+            .addRecipe(new SlimefunItemStack(QS_SI_JIE_NO_SUO_TIE, 7), new SlimefunItemStack(QS_SI_JIE_NO_SUO_TIE, 63))
+            .addRecipe(new SlimefunItemStack(QS_WU_JIE_NO_SUO_QIAN, 7), new SlimefunItemStack(QS_WU_JIE_NO_SUO_QIAN, 63))
+            .addRecipe(new SlimefunItemStack(QS_WU_JIE_NO_SUO_XIN, 7), new SlimefunItemStack(QS_WU_JIE_NO_SUO_XIN, 63))
+            .addRecipe(new SlimefunItemStack(QS_WU_JIE_NO_SUO_YIN, 7), new SlimefunItemStack(QS_WU_JIE_NO_SUO_YIN, 63))
+            .addRecipe(new SlimefunItemStack(QS_WU_JIE_NO_SUO_XI, 7), new SlimefunItemStack(QS_WU_JIE_NO_SUO_XI, 63))
+            .addRecipe(new SlimefunItemStack(QS_WU_JIE_NO_SUO_LV, 7), new SlimefunItemStack(QS_WU_JIE_NO_SUO_LV, 63))
+            .addRecipe(new SlimefunItemStack(QS_WU_JIE_NO_SUO_MEI, 7), new SlimefunItemStack(QS_WU_JIE_NO_SUO_MEI, 63))
+            .addRecipe(new SlimefunItemStack(QS_WU_JIE_NO_SUO_TONG, 7), new SlimefunItemStack(QS_WU_JIE_NO_SUO_TONG, 63))
+            .addRecipe(new SlimefunItemStack(QS_WU_JIE_NO_SUO_JIN, 7), new SlimefunItemStack(QS_WU_JIE_NO_SUO_JIN, 63))
+            .addRecipe(new SlimefunItemStack(QS_WU_JIE_NO_SUO_TIE, 7), new SlimefunItemStack(QS_WU_JIE_NO_SUO_TIE, 63))
+            .ticksPerOutput(1).energyPerTick(8787).register(qs);
 
+        new XiPiaZhiZaoJi_V1 ( C.QS_JQ,  XiPiaZhiZaoJi_V1.QS_XIPIAZHIZAOJI_V1, RecipeType.ENHANCED_CRAFTING_TABLE,
+            XiPiaZhiZaoJi_V1.RECIPE_QS_XIPIAZHIZAOJI_V1).setMachineIdentifier( XiPiaZhiZaoJi_V1.QS_XIPIAZHIZAOJI_V1.getItemId())
+            .setMachineRecipes( XiPiaZhiZaoJi_V1.getAllRecipe()).
+            setTimeProcess(3).
+            setProcessingSpeed(1).
+            setCapacity(15000)
+            .setEnergyConsumption(6500).register(qs);
+        new XiPiaZhiZaoJi_V2 ( C.QS_JQ,  XiPiaZhiZaoJi_V2.QS_XIPIAZHIZAOJI_V2, RecipeType.ENHANCED_CRAFTING_TABLE,
+            XiPiaZhiZaoJi_V2.RECIPE_QS_XIPIAZHIZAOJI_V2).setMachineIdentifier( XiPiaZhiZaoJi_V2.QS_XIPIAZHIZAOJI_V2.getItemId())
+            .setMachineRecipes( XiPiaZhiZaoJi_V2.getAllRecipe()).
+            setTimeProcess(3).
+            setProcessingSpeed(1).
+            setCapacity(50000)
+            .setEnergyConsumption(13000).register(qs);
+        new XiPiaZhiZaoJi_V3 ( C.QS_JQ,  XiPiaZhiZaoJi_V3.QS_XIPIAZHIZAOJI_V3, RecipeType.ENHANCED_CRAFTING_TABLE,
+            XiPiaZhiZaoJi_V3.RECIPE_QS_XIPIAZHIZAOJI_V3).setMachineIdentifier( XiPiaZhiZaoJi_V3.QS_XIPIAZHIZAOJI_V3.getItemId())
+            .setMachineRecipes( XiPiaZhiZaoJi_V3.getAllRecipe()).
+            setTimeProcess(3).
+            setProcessingSpeed(1).
+            setCapacity(70000)
+            .setEnergyConsumption(26000).register(qs);
+        new XiPiaZhiZaoJi_V4 ( C.QS_JQ,  XiPiaZhiZaoJi_V4.QS_XIPIAZHIZAOJI_V4, RecipeType.ENHANCED_CRAFTING_TABLE,
+            XiPiaZhiZaoJi_V4.RECIPE_QS_XIPIAZHIZAOJI_V4).setMachineIdentifier( XiPiaZhiZaoJi_V4.QS_XIPIAZHIZAOJI_V4.getItemId())
+            .setMachineRecipes( XiPiaZhiZaoJi_V4.getAllRecipe()).
+            setTimeProcess(3).
+            setProcessingSpeed(1).
+            setCapacity(90000)
+            .setEnergyConsumption(40000).register(qs);
 
-
-
-
-
-
+        new XiPiaJiHuoQi_V1 ( C.QS_JQ, QS_XI_PIA_JI_HUO_QI_V1, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+            SlimefunItems.LIGHTNING_RUNE, QS_GANG_JIN_HE_XIN, SlimefunItems.ENCHANTMENT_RUNE,
+            QS_QIANG_HUA_BAN, XiPiaZhiZaoJi_V1.QS_XIPIAZHIZAOJI_V1, QS_QIANG_HUA_BAN,
+            SlimefunItems.SOULBOUND_RUNE, QS_GAO_JIE_XIA_JIE, SlimefunItems.RAINBOW_RUNE
+        }).register ( qs );
+        new XiPiaJiHuoQi_V2 ( C.QS_JQ, QS_XI_PIA_JI_HUO_QI_V2, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+            QS_XI_PIA_JI_HUO_QI_V1, QS_GANG_JIN_HE_XIN, QS_XI_PIA_JI_HUO_QI_V1,
+            XiPiaZhiZaoJi_V2.QS_XIPIAZHIZAOJI_V2, QS_GAO_JIE_XIA_JIE, XiPiaZhiZaoJi_V2.QS_XIPIAZHIZAOJI_V2,
+            QS_XI_PIA_JI_HUO_QI_V1, QS_GANG_JIN_HE_XIN,QS_XI_PIA_JI_HUO_QI_V1
+        }).register ( qs );
+        new XiPiaJiHuoQi_V3 ( C.QS_JQ, QS_XI_PIA_JI_HUO_QI_V3, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+            QS_XI_PIA_JI_HUO_QI_V2, QS_GANG_JIN_HE_XIN, QS_XI_PIA_JI_HUO_QI_V2,
+            XiPiaZhiZaoJi_V3.QS_XIPIAZHIZAOJI_V3, QS_GAO_JIE_XIA_JIE, XiPiaZhiZaoJi_V3.QS_XIPIAZHIZAOJI_V3,
+            QS_XI_PIA_JI_HUO_QI_V2, QS_GANG_JIN_HE_XIN,QS_XI_PIA_JI_HUO_QI_V2
+        }).register ( qs );
+        new XiPiaJiHuoQi_V4 ( C.QS_JQ, QS_XI_PIA_JI_HUO_QI_V4, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+            QS_XI_PIA_JI_HUO_QI_V3, QS_GANG_JIN_HE_XIN, QS_XI_PIA_JI_HUO_QI_V3,
+            XiPiaZhiZaoJi_V4.QS_XIPIAZHIZAOJI_V4, QS_GAO_JIE_XIA_JIE, XiPiaZhiZaoJi_V4.QS_XIPIAZHIZAOJI_V4,
+            QS_XI_PIA_JI_HUO_QI_V3, QS_GANG_JIN_HE_XIN,QS_XI_PIA_JI_HUO_QI_V3
+        }).register ( qs );
 
 
 

@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>io.gitee.crankygoudan</groupId>
     <artifactId>TsingshanTechnology</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
 
     <properties>
         <maven.compiler.source>16</maven.compiler.source>
@@ -133,10 +133,19 @@
             <scope>provided</scope>
         </dependency>
 
+
+
         <dependency>
             <groupId>com.github.SlimefunGuguProject</groupId>
             <artifactId>SlimefunRelativeLib</artifactId>
             <version>88a1e9254e</version>
+        </dependency>
+
+        <dependency>
+            <groupId>net.guizhanss</groupId>
+            <artifactId>GuizhanLib</artifactId>
+            <version>0.9.7</version>
+            <scope>compile</scope>
         </dependency>
 
         <dependency>

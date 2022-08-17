@@ -57,7 +57,7 @@ public class QingShanJiQi_V2 {
         Y.colorPseudorandomString ("青山神级硬化器") + " " + Y.colorPseudorandomString(" "),
         Y.colorPseudorandomString("粉末变为锭"),
         MachineLore.speed(64),
-        MachineLore.energyPerSecond(800));
+        MachineLore.energyPerSecond(4000));
 
     public static final SlimefunItemStack QS_CHU_JI_DIN_XIANG_FEN_MO_BAO_FA_QI_JIN_FEN = new SlimefunItemStack (
         " QS_CHU_JI_DIN_XIANG_FEN_MO_BAO_FA_QI_JIN_FEN",
@@ -429,7 +429,7 @@ public class QingShanJiQi_V2 {
         .addRecipe(new SlimefunItemStack(SlimefunItems.GOLD_24K, 22), new SlimefunItemStack(SlimefunItems.GOLD_DUST, 64))
         .addRecipe(new ItemStack(Material.IRON_INGOT,64), new SlimefunItemStack(SlimefunItems.IRON_DUST, 64))
         .addRecipe(new SlimefunItemStack(SlimefunItems.MAGNESIUM_INGOT,64), new SlimefunItemStack(SlimefunItems.MAGNESIUM_DUST, 64))
-        .ticksPerOutput(1).energyPerTick(40000).register(qs);
+        .ticksPerOutput(1).energyPerTick(4000).register(qs);
 
         new ChuJiDinXiangFenMoBaoFaQi_JINFEN_V1 ( C.QS_JQ_V2, QS_CHU_JI_DIN_XIANG_FEN_MO_BAO_FA_QI_JIN_FEN, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
             QS_YUAN_SHI_ZHI_ZAO_JI, SlimefunItems.ELECTRIC_GOLD_PAN_3, QS_YUAN_SHI_ZHI_ZAO_JI,

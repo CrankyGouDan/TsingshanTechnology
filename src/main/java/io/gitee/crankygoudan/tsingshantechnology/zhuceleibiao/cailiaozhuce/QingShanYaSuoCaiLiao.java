@@ -218,9 +218,9 @@ public class QingShanYaSuoCaiLiao {
 
 //铅
         new UnplaceableBlock ( C.QS_YSCL, QS_YI_JIE_NO_SUO_QIAN, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
-            SlimefunItems.TIN_INGOT, SlimefunItems.TIN_INGOT, SlimefunItems.TIN_INGOT,
-            SlimefunItems.TIN_INGOT, SlimefunItems.TIN_INGOT, SlimefunItems.TIN_INGOT,
-            SlimefunItems.TIN_INGOT, SlimefunItems.TIN_INGOT, SlimefunItems.TIN_INGOT
+            SlimefunItems.LEAD_INGOT, SlimefunItems.LEAD_INGOT, SlimefunItems.LEAD_INGOT,
+            SlimefunItems.LEAD_INGOT, SlimefunItems.LEAD_INGOT, SlimefunItems.LEAD_INGOT,
+            SlimefunItems.LEAD_INGOT, SlimefunItems.LEAD_INGOT, SlimefunItems.LEAD_INGOT
         } ).register ( qs );
         new UnplaceableBlock ( C.QS_YSCL, QS_ER_JIE_NO_SUO_QIAN, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
             QS_YI_JIE_NO_SUO_QIAN, QS_YI_JIE_NO_SUO_QIAN, QS_YI_JIE_NO_SUO_QIAN,

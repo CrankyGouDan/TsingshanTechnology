@@ -45,7 +45,20 @@ public class T {
     public static final String QS_CHU_JI_DIN_XIANG_FEN_MO_BAO_FA_QI_MEI_DIN= "22749d37c3f98d457bf54022a8b613a4353ed8dd2e149426fc42db3b7d";//定向粉末爆发器 镁锭
 
     public static final String QS_PAO_PAO_FA_DIAN_JI= "240775c3ad75763613f32f04986881bbe4eee4366d0c57f17f7c7514e2d0a77d";//跑跑发电机
-
+//容器
+    public static final String QS_MU_XIANG = "fd761cc16562c88d2fbe40ad38502bc3b4a87859887dbc35f272e30d8070eeec";//木箱
+    public static final String QS_TIE_XIANG = "769ff2b0e524574d10af140c86eeedc433844f3cf13eba8d08df6a14b55eaa6b";//铁箱
+    public static final String QS_JIN_XIANG = "cdf81449131dcdd3578899fcd9592e13f5cca57ae7481fd6710bb6ca85d65c9";//金箱
+    public static final String QS_ZUAN_SHI_XIANG = "abec30e39cad731639a788a321a18f1f7f9f8702d11050307dcf3bece6d8b47d";//钻石箱
+    public static final String QS_CHU_XUE_ZHE_BAO_XIANG = "cba77856d80dade55699544ddcd685964b0180823fe4ff270de7e5f58aecf3a5";//初学者任务箱
+    public static final String QS_BIAO_ZHUN_REN_WU_BAO_XIANG = "56d7fdb50f14c731c727b0e0d189b6a874319fc0d79c8a099acfc77c7b2d9196";//标准任务箱
+    public static final String QS_QIANG_DA_DE_REN_WU_BAO_XIANG = "8d6a60e5799f4edb1bf52df49474d7b428c964e4a941328e241a1eab96025869";//强大的任务宝箱
+    public static final String QS_JIE_JING_SHI_SHI_REN_WU_BAO_XIANG = "c285dd77c64e2368fe77c31ff7c3d42b700fb7b74f2b463e696916c90f5d27ab";//结晶史诗任务宝箱
+    public static final String QS_MI_FENG_SHI_SHI_REN_WU_BAO_XIANG = "7d60534e22e371475d5434d0f49ae058d3941b03a7c50a6eef29620c692778e0";//蜜蜂史诗任务宝箱
+    public static final String QS_HUANG_JIA_SHI_SHI_REN_WU_BAO_XIANG = "d51a5e9524e5dc3d9fa13ff395eb6824f26761556a669a6ba940290fdcbb60f5";//皇家史诗任务宝箱
+    public static final String QS_XIE_JIAO_SHI_SHI_REN_WU_BAO_XIANG = "940d127a92d0b3d5b5a32add67ddf7db98c1ad7d54919494662e8deaeb4a0d42";//邪教史诗任务宝箱
+    public static final String QS_DA_LI_SHI_SHI_SHI_REN_WU_BAO_XIANG = "cd592402a294efed3b8b6e59a53c2fbe71eabd85ed05fa6b0b0baa04303c086f";//大理石史诗任务宝箱
+    public static final String QS_WU_XIAO_DE_SHI_SHI_REN_WU_BAO_XIANG = "445240fcf1a9796327dda5593985343af9121a7156bc76e3d6b341b02e6a6e52";//无效的任务宝箱
 
     //材料
     public static final String  QS_DAIDAI_DE_TIE_KUAI="f5e71aed011f4413c53275e73ff7c3956d7def68468bfeca611b14dc17b609e8";//呆呆的铁块
@@ -79,6 +92,8 @@ public class T {
     public static final String  QS_ZI_JING_SHI_ZHUANG = "6d1c52d33578b0aab95074a8b6523891e66a5a2729b5e9047152c933a62e81e7";//紫晶石
     public static final String  QS_ZI_JING_MO_HE = "1afe7b18aab9a375488a86917602e1a73ffa58973adc6b8f9e998fc21969b9b7";//紫晶魔核
     public static final String  QS_KE_JI_ZHI_XIN = "b6a76cc22e7c2ab9c540d1244eadba581f5dd9e18f9adacf05280a5b48b8f618";//科技之心
+    public static final String  QS_QIANG_HUA_DIN = "c0e1da58695421d4558b7722bd99e8f570af472ab107f541938db504d6472d0b";//强化锭
+    public static final String  QS_QIANG_HUA_BAN = "5bc1fd7ec1a1145063239095b17135568e3188be203b318a989df4964b8cf2e0";//强化板
 
     //压缩材料
     public static final String  QS_YI_JIE_YUAN_SU_JIE_JING = "449a6d330465bc94d573716428dc662cc16acd3b80535b52028c665f4daf682e";//一阶元素结晶

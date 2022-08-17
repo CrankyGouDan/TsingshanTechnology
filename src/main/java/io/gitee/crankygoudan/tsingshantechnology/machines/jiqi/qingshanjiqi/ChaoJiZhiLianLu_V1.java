@@ -21,7 +21,7 @@ import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
 @Async
 public class ChaoJiZhiLianLu_V1 extends MediumContainerMachine {
 
-  public static final SlimefunItemStack QS_CHAO_JI_ZHI_LIAN_LU_V1 = new SlimefunItemStack("QS_CHAO_JI_ZHI_LIAN_LU_V1", Material.FURNACE, Y.colorPseudorandomString("超级冶炼炉")+ " " + Y.colorPseudorandomString(" "),
+  public static final SlimefunItemStack QS_CHAO_JI_ZHI_LIAN_LU_V1 = new SlimefunItemStack("QS_CHAO_JI_ZHI_LIAN_LU_V1", Material.FURNACE, Y.colorPseudorandomString("超级冶炼炉")+ " " + Y.colorPseudorandomString("II"),
           Y.colorPseudorandomString(" "),
           MachineLore.speed(8),
           MachineLore.energyBuffer(10000),
@@ -29,11 +29,17 @@ public class ChaoJiZhiLianLu_V1 extends MediumContainerMachine {
 
 
   public static final ItemStack[] RECIPE_QS_CHAO_JI_ZHI_LIAN_LU_V1 = new ItemStack[]{
-      SlimefunItems.ELECTRIC_PRESS_2, ChaoJiZhiLianLu_V0.QS_CHAO_JI_ZHI_LIAN_LU_V0, SlimefunItems.ELECTRIC_PRESS_2,
-      QingShanCaiLiao.QS_GANG_JIN_HE_XIN,SlimefunItems.ENERGIZED_CAPACITOR, QingShanCaiLiao.QS_GANG_JIN_HE_XIN,
+      QingShanCaiLiao.QS_QIANG_HUA_BAN, ChaoJiZhiLianLu_V0.QS_CHAO_JI_ZHI_LIAN_LU_V0, QingShanCaiLiao.QS_QIANG_HUA_BAN,
+      QingShanCaiLiao.QS_GANG_JIN_HE_XIN,QingShanCaiLiao.QS_QIANG_HUA_BAN, QingShanCaiLiao.QS_GANG_JIN_HE_XIN,
       SlimefunItems.ELECTRIC_PRESS_2, ChaoJiZhiLianLu_V0.QS_CHAO_JI_ZHI_LIAN_LU_V0, SlimefunItems.ELECTRIC_PRESS_2
   };
-
+    public static final AbstractItemRecipe RECIPE_QIANG_HUA_DIN = new AbstractItemRecipe( new ItemStack[]{
+        new SlimefunItemStack(SlimefunItems.PLUTONIUM,8), new SlimefunItemStack(SlimefunItems.REDSTONE_ALLOY,8),new SlimefunItemStack(SlimefunItems.URANIUM,8),
+        new SlimefunItemStack(SlimefunItems.BLISTERING_INGOT_3,8), new SlimefunItemStack(SlimefunItems.CARBONADO,8),new SlimefunItemStack(SlimefunItems.REINFORCED_ALLOY_INGOT,8),
+        new SlimefunItemStack(SlimefunItems.HARDENED_METAL_INGOT,8), new SlimefunItemStack(SlimefunItems.GOLD_22K,8),new SlimefunItemStack(SlimefunItems.NEPTUNIUM,8),
+    },
+        new SlimefunItemStack( QingShanCaiLiao.QS_QIANG_HUA_DIN,8));
+    //强化锭
   public static final AbstractItemRecipe RECIPE_REINFORCED_ALLOY_INGOT = new AbstractItemRecipe( new ItemStack[]{null, null, null, new SlimefunItemStack(SlimefunItems.HARDENED_METAL_INGOT,8), new SlimefunItemStack(SlimefunItems.DAMASCUS_STEEL_INGOT,8), new SlimefunItemStack(SlimefunItems.CORINTHIAN_BRONZE_INGOT,8), new SlimefunItemStack(SlimefunItems.SOLDER_INGOT,8), new SlimefunItemStack(SlimefunItems.GOLD_24K,8), new SlimefunItemStack(SlimefunItems.BILLON_INGOT,8)}, new SlimefunItemStack(SlimefunItems.REINFORCED_ALLOY_INGOT,8));
   //强化合金锭
   public static final AbstractItemRecipe RECIPE_HARDENED_METAL_INGOT = new AbstractItemRecipe( new ItemStack[]{null, null, null, null, null, new SlimefunItemStack(SlimefunItems.ALUMINUM_BRONZE_INGOT,8), new SlimefunItemStack(SlimefunItems.DURALUMIN_INGOT,8), new SlimefunItemStack(SlimefunItems.COMPRESSED_CARBON,8), new SlimefunItemStack(SlimefunItems.DAMASCUS_STEEL_INGOT,8)}, new SlimefunItemStack(SlimefunItems.HARDENED_METAL_INGOT,8));
@@ -164,6 +170,7 @@ public class ChaoJiZhiLianLu_V1 extends MediumContainerMachine {
 
   public static List<AbstractItemRecipe> getAllRecipe() {
     List<AbstractItemRecipe> list = new ArrayList<>();
+      list.add(RECIPE_QIANG_HUA_DIN);  //强化锭
     list.add(RECIPE_REINFORCED_ALLOY_INGOT);  //强化合金锭
     list.add(RECIPE_HARDENED_METAL_INGOT);  //硬化金属
     list.add(RECIPE_DAMASCUS_STEEL_INGOT);  //大马士革钢锭

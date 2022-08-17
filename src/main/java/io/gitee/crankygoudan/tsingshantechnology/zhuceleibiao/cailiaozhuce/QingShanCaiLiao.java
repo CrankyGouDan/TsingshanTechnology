@@ -16,6 +16,7 @@ import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.skins.PlayerHead;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.skins.PlayerSkin;
 
+import static io.gitee.crankygoudan.tsingshantechnology.zhuceleibiao.cailiaozhuce.QingShanYaSuoCaiLiao.*;
 public class QingShanCaiLiao {
 
     public static final SlimefunItemStack QS_DAIDAI_DE_TIE_KUAI = new SlimefunItemStack ( "QS_DAIDAI_DE_TIE_KUAI", T.QS_DAIDAI_DE_TIE_KUAI, Y.colorPseudorandomString ("呆呆的铁块") + " " + Y.colorPseudorandomString(" "), Y.colorPseudorandomString("  "), Y.colorPseudorandomString("可用于合成高级"), Y.colorPseudorandomString("难得的材料") );
@@ -67,7 +68,9 @@ public class QingShanCaiLiao {
     public static final SlimefunItemStack QS_ZI_JING_SHI_ZHUANG = new SlimefunItemStack ( "QS_ZI_JING_SHI_ZHUANG",T.QS_ZI_JING_SHI_ZHUANG, Y.colorPseudorandomString ("紫晶石装") + " " + Y.colorPseudorandomString(" "), Y.colorPseudorandomString("  "),Y.colorPseudorandomString("难得的材料"));
     public static final SlimefunItemStack QS_ZI_JING_MO_HE = new SlimefunItemStack ( "QS_ZI_JING_MO_HE",T.QS_ZI_JING_MO_HE, Y.colorPseudorandomString ("紫晶魔核") + " " + Y.colorPseudorandomString(" "), Y.colorPseudorandomString("  "),Y.colorPseudorandomString("难得的材料"));
     public static final SlimefunItemStack QS_KE_JI_ZHI_XIN = new SlimefunItemStack ( "QS_KE_JI_ZHI_XIN",T.QS_KE_JI_ZHI_XIN, Y.colorPseudorandomString ("科技之星") + " " + Y.colorPseudorandomString(" "), Y.colorPseudorandomString("  "),Y.colorPseudorandomString("难得的材料"));
-
+    public static final SlimefunItemStack QS_GAO_JIE_XIA_JIE = new SlimefunItemStack ( "QS_GAO_JIE_XIA_JIE",Material.NETHER_STAR, Y.colorPseudorandomString ("高阶下届之星") + " " + Y.colorPseudorandomString(" "), Y.colorPseudorandomString("  "),Y.colorPseudorandomString("难得的材料"));
+    public static final SlimefunItemStack QS_QIANG_HUA_DIN = new SlimefunItemStack ( "QS_QIANG_HUA_DIN",T.QS_QIANG_HUA_DIN, Y.colorPseudorandomString ("强化锭") + " " + Y.colorPseudorandomString(" "), Y.colorPseudorandomString("  "),Y.colorPseudorandomString("难得的材料"));
+    public static final SlimefunItemStack QS_QIANG_HUA_BAN = new SlimefunItemStack ( "QS_QIANG_HUA_BAN",T.QS_QIANG_HUA_BAN, Y.colorPseudorandomString ("强化板") + " " + Y.colorPseudorandomString(" "), Y.colorPseudorandomString("  "),Y.colorPseudorandomString("难得的材料"));
     public static void setup(TsingshanTechnology qs) {
 
         new UnplaceableBlock ( C.QS_CL, QS_DAIDAI_DE_TIE_KUAI, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
@@ -100,15 +103,15 @@ public class QingShanCaiLiao {
             new ItemStack ( Material.DIAMOND_BLOCK,64 ), new ItemStack ( Material.DIAMOND_BLOCK,64 ), new ItemStack ( Material.DIAMOND_BLOCK,64 ),
             new ItemStack ( Material.DIAMOND_BLOCK,64 ), QS_JI_YAN, new ItemStack ( Material.DIAMOND_BLOCK,64 )
         } ).register ( qs );
-        new UnplaceableBlock ( C.QS_CL, QS_JU_BIAN_HE_XIN_CUI_HUA_QI , RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_CL, QS_LIE_ZHI_DE_JU_BIAN_HE_XIN , RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
             QS_JU_BIAN_HE_XIN_CUI_HUA_QI, QS_JU_BIAN_HE_XIN_CUI_HUA_QI, QS_JU_BIAN_HE_XIN_CUI_HUA_QI,
             QS_JU_BIAN_HE_XIN_CUI_HUA_QI, QS_JU_BIAN_HE_XIN_CUI_HUA_QI, QS_JU_BIAN_HE_XIN_CUI_HUA_QI,
             QS_JU_BIAN_HE_XIN_CUI_HUA_QI, QS_JU_BIAN_HE_XIN_CUI_HUA_QI, QS_JU_BIAN_HE_XIN_CUI_HUA_QI
         } ).register ( qs );
         new UnplaceableBlock ( C.QS_CL, QS_GANG_JIN_HE_XIN , RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
-            SlimefunItems.REINFORCED_PLATE, new ItemStack( Material.NETHER_STAR), SlimefunItems.REINFORCED_PLATE,
-            new ItemStack( Material.NETHER_STAR), SlimefunItems.CARBONADO, new ItemStack( Material.NETHER_STAR),
-            SlimefunItems.REINFORCED_PLATE, new ItemStack( Material.NETHER_STAR), SlimefunItems.REINFORCED_PLATE
+            QS_YI_JIE_YUAN_SU_JIE_JING, QS_GAO_JIE_XIA_JIE, QS_ER_JIE_YUAN_SU_JIE_JING,
+            QS_QIANG_HUA_DIN, QS_WU_JIE_YUAN_SU_JIE_JING, QS_QIANG_HUA_DIN,
+            QS_SAN_JIE_YUAN_SU_JIE_JING, QS_GAO_JIE_XIA_JIE, QS_SI_JIE_YUAN_SU_JIE_JING
         } ).register ( qs );
         new UnplaceableBlock ( C.QS_CL, QS_GAO_JIE_LONG_DAN , RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
             new ItemStack (Material.DRAGON_EGG ), new ItemStack (Material.DRAGON_EGG ), new ItemStack (Material.DRAGON_EGG ),
@@ -316,9 +319,21 @@ public class QingShanCaiLiao {
             null, new CustomItemStack( PlayerHead.getItemStack( PlayerSkin.fromHashCode( "a2ac9cbc5befca3a8007a6d0b54b626459d0d510203ea1563a09883a525a747c")), Y.colorPseudorandomString ("一头呆呆："), Y.colorPseudorandomString ( "尊敬勇士的请您 前往青山世界查看！")), null,
             null, null, null
         }).register ( qs );
-
-
-
+        new UnplaceableBlock ( C.QS_CL, QS_GAO_JIE_XIA_JIE, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+            new ItemStack ( Material.NETHER_STAR ), new ItemStack ( Material.NETHER_STAR ), new ItemStack ( Material.NETHER_STAR ),
+            new ItemStack ( Material.NETHER_STAR ), new ItemStack ( Material.NETHER_STAR ), new ItemStack ( Material.NETHER_STAR ),
+            new ItemStack ( Material.NETHER_STAR ), new ItemStack ( Material.NETHER_STAR ), new ItemStack ( Material.NETHER_STAR ),
+        }).register ( qs );
+        new UnplaceableBlock ( C.QS_CL, QS_QIANG_HUA_DIN, QingShanRT.YLL, new ItemStack[]{
+            SlimefunItems.PLUTONIUM, SlimefunItems.REDSTONE_ALLOY, SlimefunItems.URANIUM,
+            SlimefunItems.BLISTERING_INGOT_3, SlimefunItems.CARBONADO, SlimefunItems.REINFORCED_ALLOY_INGOT,
+            SlimefunItems.HARDENED_METAL_INGOT, SlimefunItems.GOLD_22K, SlimefunItems.NEPTUNIUM
+        }).register ( qs );
+        new UnplaceableBlock ( C.QS_CL, QS_QIANG_HUA_BAN, RecipeType.COMPRESSOR, new ItemStack[]{
+            new SlimefunItemStack ( QS_QIANG_HUA_DIN,8 ), null, null,
+            null, null, null,
+            null, null, null
+        }).register ( qs );
 
 
 

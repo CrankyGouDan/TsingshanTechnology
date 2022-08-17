@@ -1,43 +1,47 @@
 package io.gitee.crankygoudan.tsingshantechnology;
 
 
-import com.google.common.base.Suppliers;
-
+import io.gitee.crankygoudan.tsingshantechnology.items.chucun.StorageSaveFix;
 import io.gitee.crankygoudan.tsingshantechnology.items.mobs.CustomBoss;
-import io.gitee.crankygoudan.tsingshantechnology.items.mobs.*;
+import io.gitee.crankygoudan.tsingshantechnology.items.mobs.ItemSetup;
 import io.gitee.crankygoudan.tsingshantechnology.items.mobs.MobTicker;
 import io.gitee.crankygoudan.tsingshantechnology.utils.S;
 import io.github.mooy1.infinitylib.common.Scheduler;
 import io.github.mooy1.infinitylib.core.AbstractAddon;
 
-
 import lombok.SneakyThrows;
-
-import org.bukkit.inventory.ItemStack;
-
-import java.io.File;
 
 
 public final class TsingshanTechnology extends AbstractAddon {
     private static TsingshanTechnology instance;
 
 
-    public String folderPath;
 
 
 
     public TsingshanTechnology() {
-        super ( "yitoudaidai", "TsingshanTechnology", "master", "options.auto-update" );
+        super ( "yitoudaidai", "TsingshanTechnology", "master","options.auto-update");
+        StorageSaveFix.fixStuff(getLogger());
     }
 
     @Override
     @SneakyThrows
     public void enable() {
+
+        getLogger().info("⊙≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈⊙");
+        getLogger().info("‖yi‖                  ⊂ヽ(　^ω^)つ^ω^)つ                ‖一‖");
+        getLogger().info("‖tou‖                    ＼ 　《作／者》／                 ‖头‖");
+        getLogger().info("‖dai‖                     ( ＿_フ( ＿_フ                  ‖呆‖");
+        getLogger().info("‖dai‖　                    (／　　(／                     ‖呆‖");
+        getLogger().info("⊙≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈⊙");
+        getLogger().info("⊙未经本人允许加载擅自宣传-发现我将停止所用权⊙");
+
+
         instance = this;
         //armor
 
         ItemSetup.init ();
-        this.folderPath = getDataFolder().getAbsolutePath() + File.separator + "data-storage" + File.separator;
+
 
 
         if (getConfig().getBoolean("custom-mobs")) {
@@ -46,6 +50,7 @@ public final class TsingshanTechnology extends AbstractAddon {
 
         // S item
         S.setup(this);
+
     }
 
 
