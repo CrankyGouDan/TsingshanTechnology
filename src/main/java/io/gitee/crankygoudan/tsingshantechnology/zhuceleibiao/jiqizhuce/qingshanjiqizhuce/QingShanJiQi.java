@@ -14,6 +14,8 @@ import io.github.mooy1.infinitylib.machines.MachineLore;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
+import io.github.thebusybiscuit.slimefun4.libraries.dough.skins.PlayerHead;
+import io.github.thebusybiscuit.slimefun4.libraries.dough.skins.PlayerSkin;
 
 import static io.gitee.crankygoudan.tsingshantechnology.zhuceleibiao.cailiaozhuce.QingShanCaiLiao.*;
 import static io.gitee.crankygoudan.tsingshantechnology.zhuceleibiao.cailiaozhuce.QingShanYaSuoCaiLiao.*;
@@ -255,6 +257,17 @@ public class QingShanJiQi {
         MachineLore.energyBuffer(80000),
         MachineLore.energyPerSecond(36000));
 
+    public static final SlimefunItemStack QS_YA_SUO_GONG_CHANG = new SlimefunItemStack(
+        "QS_YA_SUO_GONG_CHANG",
+        PlayerHead.getItemStack( PlayerSkin.fromHashCode("e48337f7ede15c3b2f8dc6a63bd92874cdf74ec862b4118c7e35559ce8b4d")),
+        Y.colorPseudorandomString ( "压缩工厂" )
+    );
+    public static final SlimefunItemStack QS_GONG_CHANG = new SlimefunItemStack(
+        "QS_QING_SHAN_GONG_CHANG",
+        PlayerHead.getItemStack( PlayerSkin.fromHashCode("fe0d458edd943afcbbcae9499dea6f7d52084f3e269571b858ecbd933f83358f")),
+        Y.colorPseudorandomString ( "青山工厂" )
+    );
+
 
     public static void setup(TsingshanTechnology qs) {
 
@@ -373,15 +386,15 @@ public class QingShanJiQi {
         }).register ( qs );
 
         new YuanShiZhiZaoJi  ( C.QS_JQ, QS_YUAN_SHI_ZHI_ZAO_JI, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
-            SlimefunItems.PROGRAMMABLE_ANDROID_MINER, new ItemStack ( Material.NETHERITE_PICKAXE ), SlimefunItems.PROGRAMMABLE_ANDROID_MINER,
+            SlimefunItems.PROGRAMMABLE_ANDROID_MINER, new ItemStack ( Material.DIAMOND_PICKAXE ), SlimefunItems.PROGRAMMABLE_ANDROID_MINER,
             new ItemStack ( Material.WATER_BUCKET ), SlimefunItems.PROGRAMMABLE_ANDROID_MINER, new ItemStack ( Material.LAVA_BUCKET ),
-            SlimefunItems.PROGRAMMABLE_ANDROID_MINER, new ItemStack ( Material.NETHERITE_PICKAXE ), SlimefunItems.PROGRAMMABLE_ANDROID_MINER
+            SlimefunItems.PROGRAMMABLE_ANDROID_MINER, new ItemStack ( Material.DIAMOND_PICKAXE ), SlimefunItems.PROGRAMMABLE_ANDROID_MINER
         }).register ( qs );
 
         new DiYuYaniZhiZaoJi ( C.QS_JQ, QS_DI_YU_YAN_ZHI_ZAO_JI , RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
-            SlimefunItems.PROGRAMMABLE_ANDROID_FARMER, new ItemStack ( Material.NETHERITE_PICKAXE ), SlimefunItems.PROGRAMMABLE_ANDROID_FARMER,
+            SlimefunItems.PROGRAMMABLE_ANDROID_FARMER, new ItemStack ( Material.DIAMOND_PICKAXE ), SlimefunItems.PROGRAMMABLE_ANDROID_FARMER,
             new ItemStack ( Material.WATER_BUCKET ), SlimefunItems.PROGRAMMABLE_ANDROID_MINER, new ItemStack ( Material.LAVA_BUCKET ),
-            SlimefunItems.PROGRAMMABLE_ANDROID_FARMER, new ItemStack ( Material.NETHERITE_PICKAXE ), SlimefunItems.PROGRAMMABLE_ANDROID_FARMER
+            SlimefunItems.PROGRAMMABLE_ANDROID_FARMER, new ItemStack ( Material.DIAMOND_PICKAXE ), SlimefunItems.PROGRAMMABLE_ANDROID_FARMER
         }).register ( qs );
 
         new ShaLiZhiZaoJi ( C.QS_JQ, QS_SHA_LI_ZHI_ZAO_JI , RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
@@ -404,7 +417,7 @@ public class QingShanJiQi {
 
         new MuCaiZhiZaoJi ( C.QS_JQ, QS_MU_CAI_ZHI_ZAO_JI, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
             SlimefunItems.PROGRAMMABLE_ANDROID_WOODCUTTER,SlimefunItems.MAGNESIUM_INGOT, SlimefunItems.PROGRAMMABLE_ANDROID_WOODCUTTER,
-            new ItemStack ( Material.NETHERITE_AXE ), SlimefunItems.PROGRAMMABLE_ANDROID_MINER,new ItemStack ( Material.NETHERITE_AXE ),
+            new ItemStack ( Material.DIAMOND_AXE ), SlimefunItems.PROGRAMMABLE_ANDROID_MINER,new ItemStack ( Material.DIAMOND_AXE ),
             SlimefunItems.PROGRAMMABLE_ANDROID_WOODCUTTER, SlimefunItems.ELECTRIC_MOTOR, SlimefunItems.PROGRAMMABLE_ANDROID_WOODCUTTER
         }).register ( qs );
 

@@ -5,6 +5,7 @@ import org.bukkit.inventory.ItemStack;
 
 import io.gitee.crankygoudan.tsingshantechnology.TsingshanTechnology;
 import io.gitee.crankygoudan.tsingshantechnology.items.mobs.QingShanRT;
+import io.gitee.crankygoudan.tsingshantechnology.machines.duojiegoufangkuaijiqi.QingShanGongChang;
 import io.gitee.crankygoudan.tsingshantechnology.utils.C;
 import io.gitee.crankygoudan.tsingshantechnology.utils.T;
 import io.gitee.crankygoudan.tsingshantechnology.utils.Y;
@@ -73,52 +74,52 @@ public class QingShanCaiLiao {
     public static final SlimefunItemStack QS_QIANG_HUA_BAN = new SlimefunItemStack ( "QS_QIANG_HUA_BAN",T.QS_QIANG_HUA_BAN, Y.colorPseudorandomString ("强化板") + " " + Y.colorPseudorandomString(" "), Y.colorPseudorandomString("  "),Y.colorPseudorandomString("难得的材料"));
     public static void setup(TsingshanTechnology qs) {
 
-        new UnplaceableBlock ( C.QS_CL, QS_DAIDAI_DE_TIE_KUAI, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_CL, QS_DAIDAI_DE_TIE_KUAI, QingShanGongChang.QS_GONG_CHANG, new ItemStack[]{
             new ItemStack ( Material.IRON_BLOCK,64 ), new ItemStack ( Material.IRON_BLOCK,64 ),new ItemStack ( Material.IRON_BLOCK,64 ),
             QS_JI_YAN, QS_JI_YAN, QS_JI_YAN,
             new ItemStack ( Material.IRON_BLOCK,64 ), new ItemStack ( Material.IRON_BLOCK,64 ),new ItemStack ( Material.IRON_BLOCK,64 )
         } ).register ( qs );
-        new UnplaceableBlock ( C.QS_CL, QS_DAIDAI_DE_YUAN_SHI, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_CL, QS_DAIDAI_DE_YUAN_SHI,QingShanGongChang.QS_GONG_CHANG, new ItemStack[]{
             new ItemStack ( Material.COBBLESTONE,64 ), new ItemStack ( Material.COBBLESTONE,64 ), new ItemStack ( Material.COBBLESTONE,64 ),
             QS_JI_YAN, new ItemStack ( Material.COBBLESTONE,64 ), QS_JI_YAN,
             new ItemStack ( Material.COBBLESTONE,64 ), new ItemStack ( Material.COBBLESTONE,64 ), new ItemStack ( Material.COBBLESTONE,64 )
         } ).register ( qs );
-        new UnplaceableBlock ( C.QS_CL, QS_DAIDAI_DE_JI_YAN , RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_CL, QS_DAIDAI_DE_JI_YAN ,QingShanGongChang.QS_GONG_CHANG, new ItemStack[]{
             null, QS_JI_YAN, null,
             QS_JI_YAN, QS_JI_YAN, QS_JI_YAN,
             null, QS_JI_YAN, null
         } ).register ( qs );
-        new UnplaceableBlock ( C.QS_CL, QS_DAIDAI_DE_HONG_SHI_KUAI , RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_CL, QS_DAIDAI_DE_HONG_SHI_KUAI ,QingShanGongChang.QS_GONG_CHANG, new ItemStack[]{
             new ItemStack ( Material.REDSTONE_BLOCK,64 ), new ItemStack ( Material.REDSTONE_BLOCK,64 ), new ItemStack ( Material.REDSTONE_BLOCK,64 ),
             new ItemStack ( Material.REDSTONE_BLOCK,64 ), QS_JI_YAN, new ItemStack ( Material.REDSTONE_BLOCK,64 ),
             new ItemStack ( Material.REDSTONE_BLOCK,64 ), new ItemStack ( Material.REDSTONE_BLOCK,64 ), new ItemStack ( Material.REDSTONE_BLOCK,64 )
         } ).register ( qs );
-        new UnplaceableBlock ( C.QS_CL, QS_DAIDAI_DE_RO_LU , RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_CL, QS_DAIDAI_DE_RO_LU ,QingShanGongChang.QS_GONG_CHANG, new ItemStack[]{
             new ItemStack ( Material.FURNACE,64 ), new ItemStack ( Material.FURNACE,64 ),new ItemStack ( Material.FURNACE,64 ),
             new ItemStack ( Material.FURNACE,64 ), QS_JI_YAN, new ItemStack ( Material.FURNACE,64 ),
             new ItemStack ( Material.FURNACE,64 ), new ItemStack ( Material.FURNACE,64 ), new ItemStack ( Material.FURNACE,64 )
         } ).register ( qs );
-        new UnplaceableBlock ( C.QS_CL, QS_DAIDAI_DE_ZUAN_SHI_KUAI , RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_CL, QS_DAIDAI_DE_ZUAN_SHI_KUAI ,QingShanGongChang.QS_GONG_CHANG, new ItemStack[]{
             new ItemStack ( Material.DIAMOND_BLOCK,64 ), QS_JI_YAN, new ItemStack ( Material.DIAMOND_BLOCK,64 ),
             new ItemStack ( Material.DIAMOND_BLOCK,64 ), new ItemStack ( Material.DIAMOND_BLOCK,64 ), new ItemStack ( Material.DIAMOND_BLOCK,64 ),
             new ItemStack ( Material.DIAMOND_BLOCK,64 ), QS_JI_YAN, new ItemStack ( Material.DIAMOND_BLOCK,64 )
         } ).register ( qs );
-        new UnplaceableBlock ( C.QS_CL, QS_LIE_ZHI_DE_JU_BIAN_HE_XIN , RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_CL, QS_LIE_ZHI_DE_JU_BIAN_HE_XIN ,QingShanGongChang.QS_GONG_CHANG, new ItemStack[]{
             QS_JU_BIAN_HE_XIN_CUI_HUA_QI, QS_JU_BIAN_HE_XIN_CUI_HUA_QI, QS_JU_BIAN_HE_XIN_CUI_HUA_QI,
             QS_JU_BIAN_HE_XIN_CUI_HUA_QI, QS_JU_BIAN_HE_XIN_CUI_HUA_QI, QS_JU_BIAN_HE_XIN_CUI_HUA_QI,
             QS_JU_BIAN_HE_XIN_CUI_HUA_QI, QS_JU_BIAN_HE_XIN_CUI_HUA_QI, QS_JU_BIAN_HE_XIN_CUI_HUA_QI
         } ).register ( qs );
-        new UnplaceableBlock ( C.QS_CL, QS_GANG_JIN_HE_XIN , RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_CL, QS_GANG_JIN_HE_XIN ,QingShanGongChang.QS_GONG_CHANG, new ItemStack[]{
             QS_YI_JIE_YUAN_SU_JIE_JING, QS_GAO_JIE_XIA_JIE, QS_ER_JIE_YUAN_SU_JIE_JING,
-            QS_QIANG_HUA_DIN, QS_WU_JIE_YUAN_SU_JIE_JING, QS_QIANG_HUA_DIN,
+            SlimefunItems.RAW_CARBONADO, QS_WU_JIE_YUAN_SU_JIE_JING, SlimefunItems.RAW_CARBONADO,
             QS_SAN_JIE_YUAN_SU_JIE_JING, QS_GAO_JIE_XIA_JIE, QS_SI_JIE_YUAN_SU_JIE_JING
         } ).register ( qs );
-        new UnplaceableBlock ( C.QS_CL, QS_GAO_JIE_LONG_DAN , RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_CL, QS_GAO_JIE_LONG_DAN ,QingShanGongChang.QS_GONG_CHANG, new ItemStack[]{
             new ItemStack (Material.DRAGON_EGG ), new ItemStack (Material.DRAGON_EGG ), new ItemStack (Material.DRAGON_EGG ),
             new ItemStack (Material.DRAGON_EGG ), new ItemStack (Material.DRAGON_EGG ), new ItemStack (Material.DRAGON_EGG ),
             new ItemStack (Material.DRAGON_EGG ), new ItemStack (Material.DRAGON_EGG ), new ItemStack (Material.DRAGON_EGG )
         } ).register ( qs );
-        new UnplaceableBlock ( C.QS_CL, QS_CHAO_JI_LONG_DAN , RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_CL, QS_CHAO_JI_LONG_DAN ,QingShanGongChang.QS_GONG_CHANG, new ItemStack[]{
             QS_GAO_JIE_LONG_DAN, QS_GAO_JIE_LONG_DAN, QS_GAO_JIE_LONG_DAN,
             QS_GAO_JIE_LONG_DAN, QS_GAO_JIE_LONG_DAN, QS_GAO_JIE_LONG_DAN,
             QS_GAO_JIE_LONG_DAN, QS_GAO_JIE_LONG_DAN, QS_GAO_JIE_LONG_DAN
@@ -128,17 +129,17 @@ public class QingShanCaiLiao {
             null, new CustomItemStack( PlayerHead.getItemStack( PlayerSkin.fromHashCode( "a2ac9cbc5befca3a8007a6d0b54b626459d0d510203ea1563a09883a525a747c")), Y.colorPseudorandomString ("一头呆呆："), Y.colorPseudorandomString ( "尊敬勇士的请您 前往青山世界查看！")), null,
             null, null, null
         }).register ( qs );
-        new UnplaceableBlock ( C.QS_CL, QS_SHI_MO_XI , RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_CL, QS_SHI_MO_XI ,QingShanGongChang.QS_GONG_CHANG, new ItemStack[]{
             QS_SHI_MO_XI_FEN_CHEN, QS_SHI_MO_XI_FEN_CHEN, QS_SHI_MO_XI_FEN_CHEN,
             QS_SHI_MO_XI_FEN_CHEN, QS_SHI_MO_XI_FEN_CHEN, QS_SHI_MO_XI_FEN_CHEN,
             QS_SHI_MO_XI_FEN_CHEN, QS_SHI_MO_XI_FEN_CHEN, QS_SHI_MO_XI_FEN_CHEN
         }).register ( qs );
-        new UnplaceableBlock ( C.QS_CL, QS_SHI_MO_XI_BAN , RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_CL, QS_SHI_MO_XI_BAN ,QingShanGongChang.QS_GONG_CHANG, new ItemStack[]{
             QS_SHI_MO_XI, QS_SHI_MO_XI, QS_SHI_MO_XI,
             QS_SHI_MO_XI, QS_SHI_MO_XI, QS_SHI_MO_XI,
             QS_SHI_MO_XI, QS_SHI_MO_XI, QS_SHI_MO_XI
         }).register ( qs );
-        new UnplaceableBlock ( C.QS_CL, QS_SHI_MO_XI_QI_NING_JIAO , RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_CL, QS_SHI_MO_XI_QI_NING_JIAO ,QingShanGongChang.QS_GONG_CHANG, new ItemStack[]{
             QS_SHI_MO_XI_BAN, QS_SHI_MO_XI_BAN, QS_SHI_MO_XI_BAN,
             QS_SHI_MO_XI_BAN, QS_SHI_MO_XI_BAN, QS_SHI_MO_XI_BAN,
             QS_SHI_MO_XI_BAN, QS_SHI_MO_XI_BAN, QS_SHI_MO_XI_BAN
@@ -148,17 +149,17 @@ public class QingShanCaiLiao {
             null, new CustomItemStack( PlayerHead.getItemStack( PlayerSkin.fromHashCode( "a2ac9cbc5befca3a8007a6d0b54b626459d0d510203ea1563a09883a525a747c")), Y.colorPseudorandomString ("一头呆呆："), Y.colorPseudorandomString ( "尊敬勇士的请您 前往青山世界查看！")), null,
             null, null, null
         }).register ( qs );
-        new UnplaceableBlock ( C.QS_CL, QS_YA_SUO_MA_DA , RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_CL, QS_YA_SUO_MA_DA ,QingShanGongChang.QS_GONG_CHANG, new ItemStack[]{
             QS_GAO_ZHUAN_SU_MA_DA, QS_GAO_ZHUAN_SU_MA_DA, QS_GAO_ZHUAN_SU_MA_DA,
             QS_GAO_ZHUAN_SU_MA_DA, QS_GAO_ZHUAN_SU_MA_DA, QS_GAO_ZHUAN_SU_MA_DA,
             QS_GAO_ZHUAN_SU_MA_DA, QS_GAO_ZHUAN_SU_MA_DA, QS_GAO_ZHUAN_SU_MA_DA
         }).register ( qs );
-        new UnplaceableBlock ( C.QS_CL, QS_JI_XIAN_YA_SUO_MA_DA , RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_CL, QS_JI_XIAN_YA_SUO_MA_DA ,QingShanGongChang.QS_GONG_CHANG, new ItemStack[]{
             QS_YA_SUO_MA_DA, QS_YA_SUO_MA_DA, QS_YA_SUO_MA_DA,
             QS_YA_SUO_MA_DA, QS_YA_SUO_MA_DA, QS_YA_SUO_MA_DA,
             QS_YA_SUO_MA_DA, QS_YA_SUO_MA_DA, QS_YA_SUO_MA_DA
         }).register ( qs );
-        new UnplaceableBlock ( C.QS_CL, QS_QING_SHAN_MA_DA , RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_CL, QS_QING_SHAN_MA_DA ,QingShanGongChang.QS_GONG_CHANG, new ItemStack[]{
             QS_JI_XIAN_YA_SUO_MA_DA, QS_JI_XIAN_YA_SUO_MA_DA, QS_JI_XIAN_YA_SUO_MA_DA,
             QS_JI_XIAN_YA_SUO_MA_DA, QS_JI_XIAN_YA_SUO_MA_DA, QS_JI_XIAN_YA_SUO_MA_DA,
             QS_JI_XIAN_YA_SUO_MA_DA, QS_JI_XIAN_YA_SUO_MA_DA, QS_JI_XIAN_YA_SUO_MA_DA
@@ -168,12 +169,12 @@ public class QingShanCaiLiao {
             null, new CustomItemStack( PlayerHead.getItemStack( PlayerSkin.fromHashCode( "a2ac9cbc5befca3a8007a6d0b54b626459d0d510203ea1563a09883a525a747c")), Y.colorPseudorandomString ("一头呆呆："), Y.colorPseudorandomString ( "尊敬勇士的请您 前往青山世界查看！")), null,
             null, null, null
         }).register ( qs );
-        new UnplaceableBlock ( C.QS_CL, QS_FANG_SHENG_JIN_SHU, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_CL, QS_FANG_SHENG_JIN_SHU,QingShanGongChang.QS_GONG_CHANG, new ItemStack[]{
             QS_FANG_SHENG_SHU_LIAO, QS_FANG_SHENG_SHU_LIAO, QS_FANG_SHENG_SHU_LIAO,
             QS_FANG_SHENG_SHU_LIAO, QS_FANG_SHENG_SHU_LIAO, QS_FANG_SHENG_SHU_LIAO,
             QS_FANG_SHENG_SHU_LIAO, QS_FANG_SHENG_SHU_LIAO, QS_FANG_SHENG_SHU_LIAO
         }).register ( qs );
-        new UnplaceableBlock ( C.QS_CL,QS_QING_SHAN_JING_GANG , RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_CL,QS_QING_SHAN_JING_GANG ,QingShanGongChang.QS_GONG_CHANG, new ItemStack[]{
             QS_FANG_SHENG_JIN_SHU, QS_FANG_SHENG_JIN_SHU, QS_FANG_SHENG_JIN_SHU,
             QS_FANG_SHENG_JIN_SHU, QS_FANG_SHENG_JIN_SHU, QS_FANG_SHENG_JIN_SHU,
             QS_FANG_SHENG_JIN_SHU, QS_FANG_SHENG_JIN_SHU, QS_FANG_SHENG_JIN_SHU
@@ -183,12 +184,12 @@ public class QingShanCaiLiao {
             null, new CustomItemStack( PlayerHead.getItemStack( PlayerSkin.fromHashCode( "a2ac9cbc5befca3a8007a6d0b54b626459d0d510203ea1563a09883a525a747c")), Y.colorPseudorandomString ("一头呆呆："), Y.colorPseudorandomString ( "尊敬勇士的请您 前往青山世界查看！")), null,
             null, null, null
         }).register ( qs );
-        new UnplaceableBlock ( C.QS_CL, QS_YING_HUA_PAO_MO, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_CL, QS_YING_HUA_PAO_MO,QingShanGongChang.QS_GONG_CHANG, new ItemStack[]{
             QS_JIN_SHU_PAO_MO, QS_JIN_SHU_PAO_MO, QS_JIN_SHU_PAO_MO,
             QS_JIN_SHU_PAO_MO, QS_JIN_SHU_PAO_MO, QS_JIN_SHU_PAO_MO,
             QS_JIN_SHU_PAO_MO, QS_JIN_SHU_PAO_MO, QS_JIN_SHU_PAO_MO
         }).register ( qs );
-        new UnplaceableBlock ( C.QS_CL, QS_QING_SHAN_PAO_MO, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_CL, QS_QING_SHAN_PAO_MO,QingShanGongChang.QS_GONG_CHANG, new ItemStack[]{
             QS_YING_HUA_PAO_MO, QS_YING_HUA_PAO_MO, QS_YING_HUA_PAO_MO,
             QS_YING_HUA_PAO_MO, QS_YING_HUA_PAO_MO, QS_YING_HUA_PAO_MO,
             QS_YING_HUA_PAO_MO, QS_YING_HUA_PAO_MO, QS_YING_HUA_PAO_MO
@@ -198,12 +199,12 @@ public class QingShanCaiLiao {
             null, new CustomItemStack( PlayerHead.getItemStack( PlayerSkin.fromHashCode( "a2ac9cbc5befca3a8007a6d0b54b626459d0d510203ea1563a09883a525a747c")), Y.colorPseudorandomString ("一头呆呆："), Y.colorPseudorandomString ( "尊敬勇士的请您 前往青山世界查看！")), null,
             null, null, null
         }).register ( qs );
-        new UnplaceableBlock ( C.QS_CL, QS_WU_YUAN_CUI_HUA_QI, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_CL, QS_WU_YUAN_CUI_HUA_QI,QingShanGongChang.QS_GONG_CHANG, new ItemStack[]{
             QS_SAN_YUAN_CUI_HUA_QI, QS_SAN_YUAN_CUI_HUA_QI, QS_SAN_YUAN_CUI_HUA_QI,
             QS_SAN_YUAN_CUI_HUA_QI, QS_SAN_YUAN_CUI_HUA_QI, QS_SAN_YUAN_CUI_HUA_QI,
             QS_SAN_YUAN_CUI_HUA_QI, QS_SAN_YUAN_CUI_HUA_QI, QS_SAN_YUAN_CUI_HUA_QI
         }).register ( qs );
-        new UnplaceableBlock ( C.QS_CL, QS_QING_SHAN_CUI_HUA_QI, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_CL, QS_QING_SHAN_CUI_HUA_QI,QingShanGongChang.QS_GONG_CHANG, new ItemStack[]{
             QS_WU_YUAN_CUI_HUA_QI, QS_WU_YUAN_CUI_HUA_QI, QS_WU_YUAN_CUI_HUA_QI,
             QS_WU_YUAN_CUI_HUA_QI, QS_WU_YUAN_CUI_HUA_QI, QS_WU_YUAN_CUI_HUA_QI,
             QS_WU_YUAN_CUI_HUA_QI, QS_WU_YUAN_CUI_HUA_QI, QS_WU_YUAN_CUI_HUA_QI
@@ -213,12 +214,12 @@ public class QingShanCaiLiao {
             null, new CustomItemStack( PlayerHead.getItemStack( PlayerSkin.fromHashCode( "a2ac9cbc5befca3a8007a6d0b54b626459d0d510203ea1563a09883a525a747c")), Y.colorPseudorandomString ("一头呆呆："), Y.colorPseudorandomString ( "尊敬勇士的请您 前往青山世界查看！")), null,
             null, null, null
         }).register ( qs );
-        new UnplaceableBlock ( C.QS_CL, QS_GAO_QIANG_DU_HE_JIN, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_CL, QS_GAO_QIANG_DU_HE_JIN,QingShanGongChang.QS_GONG_CHANG, new ItemStack[]{
             QS_BO_JIN_HE_JIN, QS_BO_JIN_HE_JIN, QS_BO_JIN_HE_JIN,
             QS_BO_JIN_HE_JIN, QS_BO_JIN_HE_JIN, QS_BO_JIN_HE_JIN,
             QS_BO_JIN_HE_JIN, QS_BO_JIN_HE_JIN, QS_BO_JIN_HE_JIN
         }).register ( qs );
-        new UnplaceableBlock ( C.QS_CL, QS_QING_SHAN_HE_JIN, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_CL, QS_QING_SHAN_HE_JIN,QingShanGongChang.QS_GONG_CHANG, new ItemStack[]{
             QS_GAO_QIANG_DU_HE_JIN, QS_GAO_QIANG_DU_HE_JIN, QS_GAO_QIANG_DU_HE_JIN,
             QS_GAO_QIANG_DU_HE_JIN, QS_GAO_QIANG_DU_HE_JIN, QS_GAO_QIANG_DU_HE_JIN,
             QS_GAO_QIANG_DU_HE_JIN, QS_GAO_QIANG_DU_HE_JIN, QS_GAO_QIANG_DU_HE_JIN
@@ -228,12 +229,12 @@ public class QingShanCaiLiao {
             null, new CustomItemStack( PlayerHead.getItemStack( PlayerSkin.fromHashCode( "a2ac9cbc5befca3a8007a6d0b54b626459d0d510203ea1563a09883a525a747c")), Y.colorPseudorandomString ("一头呆呆："), Y.colorPseudorandomString ( "尊敬勇士的请您 前往青山世界查看！")), null,
             null, null, null
         }).register ( qs );
-        new UnplaceableBlock ( C.QS_CL, QS_YA_SUO_WEI_JIN_GE, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_CL, QS_YA_SUO_WEI_JIN_GE,QingShanGongChang.QS_GONG_CHANG, new ItemStack[]{
             QS_WEI_JIN_GE, QS_WEI_JIN_GE, QS_WEI_JIN_GE,
             QS_WEI_JIN_GE, QS_WEI_JIN_GE, QS_WEI_JIN_GE,
             QS_WEI_JIN_GE, QS_WEI_JIN_GE, QS_WEI_JIN_GE
         }).register ( qs );
-        new UnplaceableBlock ( C.QS_CL, QS_QING_SHAN_JIN_GE, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_CL, QS_QING_SHAN_JIN_GE,QingShanGongChang.QS_GONG_CHANG, new ItemStack[]{
             QS_WEI_JIN_GE, QS_WEI_JIN_GE, QS_WEI_JIN_GE,
             QS_WEI_JIN_GE, QS_WEI_JIN_GE, QS_WEI_JIN_GE,
             QS_WEI_JIN_GE, QS_WEI_JIN_GE, QS_WEI_JIN_GE
@@ -253,7 +254,7 @@ public class QingShanCaiLiao {
             null, new CustomItemStack( PlayerHead.getItemStack( PlayerSkin.fromHashCode( "a2ac9cbc5befca3a8007a6d0b54b626459d0d510203ea1563a09883a525a747c")), Y.colorPseudorandomString ("一头呆呆："), Y.colorPseudorandomString ( "尊敬勇士的请您 前往青山世界查看！")), null,
             null, null, null
         }).register ( qs );
-        new UnplaceableBlock ( C.QS_CL, QS_QING_SHAN_GAI_TAI_KUANG, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_CL, QS_QING_SHAN_GAI_TAI_KUANG,QingShanGongChang.QS_GONG_CHANG, new ItemStack[]{
             QS_GAI_TAI_KUANG, QS_GAI_TAI_KUANG, QS_GAI_TAI_KUANG,
             QS_GAI_TAI_KUANG, QS_GAI_TAI_KUANG, QS_GAI_TAI_KUANG,
             QS_GAI_TAI_KUANG, QS_GAI_TAI_KUANG, QS_GAI_TAI_KUANG
@@ -263,7 +264,7 @@ public class QingShanCaiLiao {
             null, new CustomItemStack( PlayerHead.getItemStack( PlayerSkin.fromHashCode( "a2ac9cbc5befca3a8007a6d0b54b626459d0d510203ea1563a09883a525a747c")), Y.colorPseudorandomString ("一头呆呆："), Y.colorPseudorandomString ( "尊敬勇士的请您 前往青山世界查看！")), null,
             null, null, null
         }).register ( qs );
-        new UnplaceableBlock ( C.QS_CL, QS_QING_SHAN_NA_MI_DIAN, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_CL, QS_QING_SHAN_NA_MI_DIAN,QingShanGongChang.QS_GONG_CHANG, new ItemStack[]{
             QS_NA_MI_DIAN, QS_NA_MI_DIAN, QS_NA_MI_DIAN,
             QS_NA_MI_DIAN, QS_NA_MI_DIAN, QS_NA_MI_DIAN,
             QS_NA_MI_DIAN, QS_NA_MI_DIAN, QS_NA_MI_DIAN
@@ -273,17 +274,17 @@ public class QingShanCaiLiao {
             null, null, null,
             null, null, null
         }).register ( qs );
-        new UnplaceableBlock ( C.QS_CL, QS_JI_YAN, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_CL, QS_JI_YAN,QingShanGongChang.QS_GONG_CHANG, new ItemStack[]{
             QS_JI_YAN_SUI_KUAI, QS_JI_YAN_SUI_KUAI, QS_JI_YAN_SUI_KUAI,
             QS_JI_YAN_SUI_KUAI, QS_JI_YAN_SUI_KUAI, QS_JI_YAN_SUI_KUAI,
             QS_JI_YAN_SUI_KUAI, QS_JI_YAN_SUI_KUAI, QS_JI_YAN_SUI_KUAI
         }).register ( qs );
-        new UnplaceableBlock ( C.QS_CL, QS_JI_YAN_SUI_KUAI, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_CL, QS_JI_YAN_SUI_KUAI,QingShanGongChang.QS_GONG_CHANG, new ItemStack[]{
             QS_JI_YAN_KE_LI, QS_JI_YAN_KE_LI, QS_JI_YAN_KE_LI,
             QS_JI_YAN_KE_LI, QS_JI_YAN_KE_LI, QS_JI_YAN_KE_LI,
             QS_JI_YAN_KE_LI, QS_JI_YAN_KE_LI, QS_JI_YAN_KE_LI
         }).register ( qs );
-        new UnplaceableBlock ( C.QS_CL, QS_JI_YAN_KE_LI, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_CL, QS_JI_YAN_KE_LI,QingShanGongChang.QS_GONG_CHANG, new ItemStack[]{
             QS_JI_YAN_FEN_MO, QS_JI_YAN_FEN_MO, QS_JI_YAN_FEN_MO,
             QS_JI_YAN_FEN_MO, QS_JI_YAN_FEN_MO, QS_JI_YAN_FEN_MO,
             QS_JI_YAN_FEN_MO, QS_JI_YAN_FEN_MO, QS_JI_YAN_FEN_MO
@@ -304,12 +305,12 @@ public class QingShanCaiLiao {
             null, null, null
         }).register ( qs );
 
-        new UnplaceableBlock ( C.QS_CL, QS_ZI_JING_SHI_ZHUANG, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_CL, QS_ZI_JING_SHI_ZHUANG,QingShanGongChang.QS_GONG_CHANG, new ItemStack[]{
             QS_ZI_JING_SHI, QS_ZI_JING_SHI, QS_ZI_JING_SHI,
             QS_ZI_JING_SHI, QS_ZI_JING_SHI, QS_ZI_JING_SHI,
             QS_ZI_JING_SHI, QS_ZI_JING_SHI, QS_ZI_JING_SHI
         }).register ( qs );
-        new UnplaceableBlock ( C.QS_CL, QS_ZI_JING_MO_HE, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_CL, QS_ZI_JING_MO_HE,QingShanGongChang.QS_GONG_CHANG, new ItemStack[]{
             QS_ZI_JING_SHI_ZHUANG, QS_ZI_JING_SHI_ZHUANG, QS_ZI_JING_SHI_ZHUANG,
             QS_ZI_JING_SHI_ZHUANG, QS_ZI_JING_SHI_ZHUANG, QS_ZI_JING_SHI_ZHUANG,
             QS_ZI_JING_SHI_ZHUANG, QS_ZI_JING_SHI_ZHUANG, QS_ZI_JING_SHI_ZHUANG
@@ -319,7 +320,7 @@ public class QingShanCaiLiao {
             null, new CustomItemStack( PlayerHead.getItemStack( PlayerSkin.fromHashCode( "a2ac9cbc5befca3a8007a6d0b54b626459d0d510203ea1563a09883a525a747c")), Y.colorPseudorandomString ("一头呆呆："), Y.colorPseudorandomString ( "尊敬勇士的请您 前往青山世界查看！")), null,
             null, null, null
         }).register ( qs );
-        new UnplaceableBlock ( C.QS_CL, QS_GAO_JIE_XIA_JIE, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_CL, QS_GAO_JIE_XIA_JIE,QingShanGongChang.QS_GONG_CHANG, new ItemStack[]{
             new ItemStack ( Material.NETHER_STAR ), new ItemStack ( Material.NETHER_STAR ), new ItemStack ( Material.NETHER_STAR ),
             new ItemStack ( Material.NETHER_STAR ), new ItemStack ( Material.NETHER_STAR ), new ItemStack ( Material.NETHER_STAR ),
             new ItemStack ( Material.NETHER_STAR ), new ItemStack ( Material.NETHER_STAR ), new ItemStack ( Material.NETHER_STAR ),

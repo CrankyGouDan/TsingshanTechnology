@@ -3,6 +3,8 @@ package io.gitee.crankygoudan.tsingshantechnology.utils;
 
 import io.gitee.crankygoudan.tsingshantechnology.TsingshanTechnology;
 import io.gitee.crankygoudan.tsingshantechnology.items.chucun.Storage;
+import io.gitee.crankygoudan.tsingshantechnology.machines.duojiegoufangkuaijiqi.QingShanGongChang;
+import io.gitee.crankygoudan.tsingshantechnology.machines.duojiegoufangkuaijiqi.YaSuoGongChang;
 import io.gitee.crankygoudan.tsingshantechnology.zhuceleibiao.cailiaozhuce.QingShanCaiLiao;
 import io.gitee.crankygoudan.tsingshantechnology.zhuceleibiao.cailiaozhuce.QingShanXinPia;
 import io.gitee.crankygoudan.tsingshantechnology.zhuceleibiao.cailiaozhuce.QingShanYaSuoCaiLiao;
@@ -24,6 +26,10 @@ public class S {
         QingShanXinPia.setup ( qs );
         QingShanFaDianJi.setup ( qs );
         Storage.setup ( qs );
+
+        new YaSuoGongChang ().register(TsingshanTechnology.getInstance());
+        new QingShanGongChang ().register(TsingshanTechnology.getInstance());
+
 
     }
 }

@@ -4,11 +4,11 @@ import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 
 import io.gitee.crankygoudan.tsingshantechnology.TsingshanTechnology;
+import io.gitee.crankygoudan.tsingshantechnology.machines.duojiegoufangkuaijiqi.YaSuoGongChang;
 import io.gitee.crankygoudan.tsingshantechnology.utils.C;
 import io.gitee.crankygoudan.tsingshantechnology.utils.T;
 import io.gitee.crankygoudan.tsingshantechnology.utils.Y;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
-import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
 import io.github.thebusybiscuit.slimefun4.implementation.items.blocks.UnplaceableBlock;
 
@@ -80,79 +80,79 @@ public class QingShanYaSuoCaiLiao {
 
     public static void setup(TsingshanTechnology qs) {
 
-        new UnplaceableBlock ( C.QS_YSCL, QS_YI_JIE_YUAN_SU_JIE_JING, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_YSCL, QS_YI_JIE_YUAN_SU_JIE_JING, YaSuoGongChang.QS_YA_SUO_GONG_CHANG, new ItemStack[]{
             QS_YI_JIE_NO_SUO_TIE, QS_YI_JIE_NO_SUO_JIN, QS_YI_JIE_NO_SUO_TONG,
             QS_YI_JIE_NO_SUO_XI, QS_YI_JIE_NO_SUO_QIAN, QS_YI_JIE_NO_SUO_YIN,
             QS_YI_JIE_NO_SUO_LV, QS_YI_JIE_NO_SUO_XIN, QS_YI_JIE_NO_SUO_MEI
-        } ).register ( qs );
-        new UnplaceableBlock ( C.QS_YSCL, QS_ER_JIE_YUAN_SU_JIE_JING, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        }).register ( qs );
+        new UnplaceableBlock ( C.QS_YSCL, QS_ER_JIE_YUAN_SU_JIE_JING, YaSuoGongChang.QS_YA_SUO_GONG_CHANG, new ItemStack[]{
             QS_ER_JIE_NO_SUO_TIE, QS_ER_JIE_NO_SUO_JIN, QS_ER_JIE_NO_SUO_TONG,
             QS_ER_JIE_NO_SUO_XI, QS_ER_JIE_NO_SUO_QIAN, QS_ER_JIE_NO_SUO_YIN,
             QS_ER_JIE_NO_SUO_LV, QS_ER_JIE_NO_SUO_XIN, QS_ER_JIE_NO_SUO_MEI
         } ).register ( qs );
-        new UnplaceableBlock ( C.QS_YSCL, QS_SAN_JIE_YUAN_SU_JIE_JING, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_YSCL, QS_SAN_JIE_YUAN_SU_JIE_JING, YaSuoGongChang.QS_YA_SUO_GONG_CHANG, new ItemStack[]{
             QS_SAN_JIE_NO_SUO_TIE, QS_SAN_JIE_NO_SUO_JIN, QS_SAN_JIE_NO_SUO_TONG,
             QS_SAN_JIE_NO_SUO_XI, QS_SAN_JIE_NO_SUO_QIAN, QS_SAN_JIE_NO_SUO_YIN,
             QS_SAN_JIE_NO_SUO_LV, QS_SAN_JIE_NO_SUO_XIN, QS_SAN_JIE_NO_SUO_MEI
         } ).register ( qs );
-        new UnplaceableBlock ( C.QS_YSCL, QS_SI_JIE_YUAN_SU_JIE_JING, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_YSCL, QS_SI_JIE_YUAN_SU_JIE_JING, YaSuoGongChang.QS_YA_SUO_GONG_CHANG, new ItemStack[]{
             QS_SI_JIE_NO_SUO_TIE, QS_SI_JIE_NO_SUO_JIN, QS_SI_JIE_NO_SUO_TONG,
             QS_SI_JIE_NO_SUO_XI, QS_SI_JIE_NO_SUO_QIAN, QS_SI_JIE_NO_SUO_YIN,
             QS_SI_JIE_NO_SUO_LV, QS_SI_JIE_NO_SUO_XIN, QS_SI_JIE_NO_SUO_MEI
         } ).register ( qs );
-        new UnplaceableBlock ( C.QS_YSCL, QS_WU_JIE_YUAN_SU_JIE_JING, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_YSCL, QS_WU_JIE_YUAN_SU_JIE_JING, YaSuoGongChang.QS_YA_SUO_GONG_CHANG, new ItemStack[]{
             QS_WU_JIE_NO_SUO_TIE, QS_WU_JIE_NO_SUO_JIN, QS_WU_JIE_NO_SUO_TONG,
             QS_WU_JIE_NO_SUO_XI, QS_WU_JIE_NO_SUO_QIAN, QS_WU_JIE_NO_SUO_YIN,
             QS_WU_JIE_NO_SUO_LV, QS_WU_JIE_NO_SUO_XIN, QS_WU_JIE_NO_SUO_MEI
         } ).register ( qs );
 //铁
-        new UnplaceableBlock ( C.QS_YSCL, QS_YI_JIE_NO_SUO_TIE, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_YSCL, QS_YI_JIE_NO_SUO_TIE, YaSuoGongChang.QS_YA_SUO_GONG_CHANG, new ItemStack[]{
             new ItemStack ( Material.IRON_INGOT ), new ItemStack ( Material.IRON_INGOT ), new ItemStack ( Material.IRON_INGOT ),
             new ItemStack ( Material.IRON_INGOT ), new ItemStack ( Material.IRON_INGOT ), new ItemStack ( Material.IRON_INGOT ),
             new ItemStack ( Material.IRON_INGOT ), new ItemStack ( Material.IRON_INGOT ), new ItemStack ( Material.IRON_INGOT )
         } ).register ( qs );
-        new UnplaceableBlock ( C.QS_YSCL, QS_ER_JIE_NO_SUO_TIE, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_YSCL, QS_ER_JIE_NO_SUO_TIE, YaSuoGongChang.QS_YA_SUO_GONG_CHANG, new ItemStack[]{
             QS_YI_JIE_NO_SUO_TIE, QS_YI_JIE_NO_SUO_TIE, QS_YI_JIE_NO_SUO_TIE,
             QS_YI_JIE_NO_SUO_TIE, QS_YI_JIE_NO_SUO_TIE, QS_YI_JIE_NO_SUO_TIE,
             QS_YI_JIE_NO_SUO_TIE, QS_YI_JIE_NO_SUO_TIE, QS_YI_JIE_NO_SUO_TIE
         } ).register ( qs );
-        new UnplaceableBlock ( C.QS_YSCL, QS_SAN_JIE_NO_SUO_TIE, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_YSCL, QS_SAN_JIE_NO_SUO_TIE, YaSuoGongChang.QS_YA_SUO_GONG_CHANG, new ItemStack[]{
             QS_ER_JIE_NO_SUO_TIE, QS_ER_JIE_NO_SUO_TIE, QS_ER_JIE_NO_SUO_TIE,
             QS_ER_JIE_NO_SUO_TIE, QS_ER_JIE_NO_SUO_TIE, QS_ER_JIE_NO_SUO_TIE,
             QS_ER_JIE_NO_SUO_TIE, QS_ER_JIE_NO_SUO_TIE, QS_ER_JIE_NO_SUO_TIE
         } ).register ( qs );
-        new UnplaceableBlock ( C.QS_YSCL, QS_SI_JIE_NO_SUO_TIE, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_YSCL, QS_SI_JIE_NO_SUO_TIE, YaSuoGongChang.QS_YA_SUO_GONG_CHANG, new ItemStack[]{
             QS_SAN_JIE_NO_SUO_TIE, QS_SAN_JIE_NO_SUO_TIE, QS_SAN_JIE_NO_SUO_TIE,
             QS_SAN_JIE_NO_SUO_TIE, QS_SAN_JIE_NO_SUO_TIE, QS_SAN_JIE_NO_SUO_TIE,
             QS_SAN_JIE_NO_SUO_TIE, QS_SAN_JIE_NO_SUO_TIE, QS_SAN_JIE_NO_SUO_TIE
         } ).register ( qs );
-        new UnplaceableBlock ( C.QS_YSCL, QS_WU_JIE_NO_SUO_TIE, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_YSCL, QS_WU_JIE_NO_SUO_TIE, YaSuoGongChang.QS_YA_SUO_GONG_CHANG, new ItemStack[]{
             QS_SI_JIE_NO_SUO_TIE, QS_SI_JIE_NO_SUO_TIE, QS_SI_JIE_NO_SUO_TIE,
             QS_SI_JIE_NO_SUO_TIE, QS_SI_JIE_NO_SUO_TIE, QS_SI_JIE_NO_SUO_TIE,
             QS_SI_JIE_NO_SUO_TIE, QS_SI_JIE_NO_SUO_TIE, QS_SI_JIE_NO_SUO_TIE
         } ).register ( qs );
 //金
-        new UnplaceableBlock ( C.QS_YSCL, QS_YI_JIE_NO_SUO_JIN, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_YSCL, QS_YI_JIE_NO_SUO_JIN, YaSuoGongChang.QS_YA_SUO_GONG_CHANG, new ItemStack[]{
             new ItemStack ( Material.GOLD_INGOT ), new ItemStack ( Material.GOLD_INGOT ), new ItemStack ( Material.GOLD_INGOT ),
             new ItemStack ( Material.GOLD_INGOT ), new ItemStack ( Material.GOLD_INGOT ), new ItemStack ( Material.GOLD_INGOT ),
             new ItemStack ( Material.GOLD_INGOT ), new ItemStack ( Material.GOLD_INGOT ), new ItemStack ( Material.GOLD_INGOT )
         } ).register ( qs );
-        new UnplaceableBlock ( C.QS_YSCL, QS_ER_JIE_NO_SUO_JIN, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_YSCL, QS_ER_JIE_NO_SUO_JIN, YaSuoGongChang.QS_YA_SUO_GONG_CHANG, new ItemStack[]{
             QS_YI_JIE_NO_SUO_JIN, QS_YI_JIE_NO_SUO_JIN, QS_YI_JIE_NO_SUO_JIN,
             QS_YI_JIE_NO_SUO_JIN, QS_YI_JIE_NO_SUO_JIN, QS_YI_JIE_NO_SUO_JIN,
             QS_YI_JIE_NO_SUO_JIN, QS_YI_JIE_NO_SUO_JIN, QS_YI_JIE_NO_SUO_JIN
         } ).register ( qs );
-        new UnplaceableBlock ( C.QS_YSCL, QS_SAN_JIE_NO_SUO_JIN, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_YSCL, QS_SAN_JIE_NO_SUO_JIN, YaSuoGongChang.QS_YA_SUO_GONG_CHANG, new ItemStack[]{
             QS_ER_JIE_NO_SUO_JIN, QS_ER_JIE_NO_SUO_JIN, QS_ER_JIE_NO_SUO_JIN,
             QS_ER_JIE_NO_SUO_JIN, QS_ER_JIE_NO_SUO_JIN, QS_ER_JIE_NO_SUO_JIN,
             QS_ER_JIE_NO_SUO_JIN, QS_ER_JIE_NO_SUO_JIN, QS_ER_JIE_NO_SUO_JIN
         } ).register ( qs );
-        new UnplaceableBlock ( C.QS_YSCL, QS_SI_JIE_NO_SUO_JIN, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_YSCL, QS_SI_JIE_NO_SUO_JIN, YaSuoGongChang.QS_YA_SUO_GONG_CHANG, new ItemStack[]{
             QS_SAN_JIE_NO_SUO_JIN, QS_SAN_JIE_NO_SUO_JIN, QS_SAN_JIE_NO_SUO_JIN,
             QS_SAN_JIE_NO_SUO_JIN, QS_SAN_JIE_NO_SUO_JIN, QS_SAN_JIE_NO_SUO_JIN,
             QS_SAN_JIE_NO_SUO_JIN, QS_SAN_JIE_NO_SUO_JIN, QS_SAN_JIE_NO_SUO_JIN
         } ).register ( qs );
-        new UnplaceableBlock ( C.QS_YSCL, QS_WU_JIE_NO_SUO_JIN, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_YSCL, QS_WU_JIE_NO_SUO_JIN, YaSuoGongChang.QS_YA_SUO_GONG_CHANG, new ItemStack[]{
             QS_SI_JIE_NO_SUO_JIN, QS_SI_JIE_NO_SUO_JIN, QS_SI_JIE_NO_SUO_JIN,
             QS_SI_JIE_NO_SUO_JIN, QS_SI_JIE_NO_SUO_JIN, QS_SI_JIE_NO_SUO_JIN,
             QS_SI_JIE_NO_SUO_JIN, QS_SI_JIE_NO_SUO_JIN, QS_SI_JIE_NO_SUO_JIN
@@ -160,27 +160,27 @@ public class QingShanYaSuoCaiLiao {
 
 
 //铜
-        new UnplaceableBlock ( C.QS_YSCL, QS_YI_JIE_NO_SUO_TONG, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_YSCL, QS_YI_JIE_NO_SUO_TONG, YaSuoGongChang.QS_YA_SUO_GONG_CHANG, new ItemStack[]{
             SlimefunItems.COPPER_INGOT, SlimefunItems.COPPER_INGOT, SlimefunItems.COPPER_INGOT,
             SlimefunItems.COPPER_INGOT, SlimefunItems.COPPER_INGOT, SlimefunItems.COPPER_INGOT,
             SlimefunItems.COPPER_INGOT, SlimefunItems.COPPER_INGOT, SlimefunItems.COPPER_INGOT
         } ).register ( qs );
-        new UnplaceableBlock ( C.QS_YSCL, QS_ER_JIE_NO_SUO_TONG, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_YSCL, QS_ER_JIE_NO_SUO_TONG, YaSuoGongChang.QS_YA_SUO_GONG_CHANG, new ItemStack[]{
             QS_YI_JIE_NO_SUO_TONG, QS_YI_JIE_NO_SUO_TONG, QS_YI_JIE_NO_SUO_TONG,
             QS_YI_JIE_NO_SUO_TONG, QS_YI_JIE_NO_SUO_TONG, QS_YI_JIE_NO_SUO_TONG,
             QS_YI_JIE_NO_SUO_TONG, QS_YI_JIE_NO_SUO_TONG, QS_YI_JIE_NO_SUO_TONG
         } ).register ( qs );
-        new UnplaceableBlock ( C.QS_YSCL, QS_SAN_JIE_NO_SUO_TONG, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_YSCL, QS_SAN_JIE_NO_SUO_TONG, YaSuoGongChang.QS_YA_SUO_GONG_CHANG, new ItemStack[]{
             QS_ER_JIE_NO_SUO_TONG, QS_ER_JIE_NO_SUO_TONG, QS_ER_JIE_NO_SUO_TONG,
             QS_ER_JIE_NO_SUO_TONG, QS_ER_JIE_NO_SUO_TONG, QS_ER_JIE_NO_SUO_TONG,
             QS_ER_JIE_NO_SUO_TONG, QS_ER_JIE_NO_SUO_TONG, QS_ER_JIE_NO_SUO_TONG
         } ).register ( qs );
-        new UnplaceableBlock ( C.QS_YSCL, QS_SI_JIE_NO_SUO_TONG, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_YSCL, QS_SI_JIE_NO_SUO_TONG, YaSuoGongChang.QS_YA_SUO_GONG_CHANG, new ItemStack[]{
             QS_SAN_JIE_NO_SUO_TONG, QS_SAN_JIE_NO_SUO_TONG, QS_SAN_JIE_NO_SUO_TONG,
             QS_SAN_JIE_NO_SUO_TONG, QS_SAN_JIE_NO_SUO_TONG, QS_SAN_JIE_NO_SUO_TONG,
             QS_SAN_JIE_NO_SUO_TONG, QS_SAN_JIE_NO_SUO_TONG, QS_SAN_JIE_NO_SUO_TONG
         } ).register ( qs );
-        new UnplaceableBlock ( C.QS_YSCL, QS_WU_JIE_NO_SUO_TONG, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_YSCL, QS_WU_JIE_NO_SUO_TONG, YaSuoGongChang.QS_YA_SUO_GONG_CHANG, new ItemStack[]{
             QS_SI_JIE_NO_SUO_TONG, QS_SI_JIE_NO_SUO_TONG, QS_SI_JIE_NO_SUO_TONG,
             QS_SI_JIE_NO_SUO_TONG, QS_SI_JIE_NO_SUO_TONG, QS_SI_JIE_NO_SUO_TONG,
             QS_SI_JIE_NO_SUO_TONG, QS_SI_JIE_NO_SUO_TONG, QS_SI_JIE_NO_SUO_TONG
@@ -189,27 +189,27 @@ public class QingShanYaSuoCaiLiao {
 
 
 //锡
-        new UnplaceableBlock ( C.QS_YSCL, QS_YI_JIE_NO_SUO_XI, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_YSCL, QS_YI_JIE_NO_SUO_XI, YaSuoGongChang.QS_YA_SUO_GONG_CHANG, new ItemStack[]{
             SlimefunItems.TIN_INGOT, SlimefunItems.TIN_INGOT, SlimefunItems.TIN_INGOT,
             SlimefunItems.TIN_INGOT, SlimefunItems.TIN_INGOT, SlimefunItems.TIN_INGOT,
             SlimefunItems.TIN_INGOT, SlimefunItems.TIN_INGOT, SlimefunItems.TIN_INGOT
         } ).register ( qs );
-        new UnplaceableBlock ( C.QS_YSCL, QS_ER_JIE_NO_SUO_XI, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_YSCL, QS_ER_JIE_NO_SUO_XI, YaSuoGongChang.QS_YA_SUO_GONG_CHANG, new ItemStack[]{
             QS_YI_JIE_NO_SUO_XI, QS_YI_JIE_NO_SUO_XI, QS_YI_JIE_NO_SUO_XI,
             QS_YI_JIE_NO_SUO_XI, QS_YI_JIE_NO_SUO_XI, QS_YI_JIE_NO_SUO_XI,
             QS_YI_JIE_NO_SUO_XI, QS_YI_JIE_NO_SUO_XI, QS_YI_JIE_NO_SUO_XI
         } ).register ( qs );
-        new UnplaceableBlock ( C.QS_YSCL, QS_SAN_JIE_NO_SUO_XI, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_YSCL, QS_SAN_JIE_NO_SUO_XI, YaSuoGongChang.QS_YA_SUO_GONG_CHANG, new ItemStack[]{
             QS_ER_JIE_NO_SUO_XI, QS_ER_JIE_NO_SUO_XI, QS_ER_JIE_NO_SUO_XI,
             QS_ER_JIE_NO_SUO_XI, QS_ER_JIE_NO_SUO_XI, QS_ER_JIE_NO_SUO_XI,
             QS_ER_JIE_NO_SUO_XI, QS_ER_JIE_NO_SUO_XI, QS_ER_JIE_NO_SUO_XI
         } ).register ( qs );
-        new UnplaceableBlock ( C.QS_YSCL, QS_SI_JIE_NO_SUO_XI, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_YSCL, QS_SI_JIE_NO_SUO_XI, YaSuoGongChang.QS_YA_SUO_GONG_CHANG, new ItemStack[]{
             QS_SAN_JIE_NO_SUO_XI, QS_SAN_JIE_NO_SUO_XI, QS_SAN_JIE_NO_SUO_XI,
             QS_SAN_JIE_NO_SUO_XI, QS_SAN_JIE_NO_SUO_XI, QS_SAN_JIE_NO_SUO_XI,
             QS_SAN_JIE_NO_SUO_XI, QS_SAN_JIE_NO_SUO_XI, QS_SAN_JIE_NO_SUO_XI
         } ).register ( qs );
-        new UnplaceableBlock ( C.QS_YSCL, QS_WU_JIE_NO_SUO_XI, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_YSCL, QS_WU_JIE_NO_SUO_XI, YaSuoGongChang.QS_YA_SUO_GONG_CHANG, new ItemStack[]{
             QS_SI_JIE_NO_SUO_XI, QS_SI_JIE_NO_SUO_XI, QS_SI_JIE_NO_SUO_XI,
             QS_SI_JIE_NO_SUO_XI, QS_SI_JIE_NO_SUO_XI, QS_SI_JIE_NO_SUO_XI,
             QS_SI_JIE_NO_SUO_XI, QS_SI_JIE_NO_SUO_XI, QS_SI_JIE_NO_SUO_XI
@@ -217,54 +217,54 @@ public class QingShanYaSuoCaiLiao {
 
 
 //铅
-        new UnplaceableBlock ( C.QS_YSCL, QS_YI_JIE_NO_SUO_QIAN, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_YSCL, QS_YI_JIE_NO_SUO_QIAN, YaSuoGongChang.QS_YA_SUO_GONG_CHANG, new ItemStack[]{
             SlimefunItems.LEAD_INGOT, SlimefunItems.LEAD_INGOT, SlimefunItems.LEAD_INGOT,
             SlimefunItems.LEAD_INGOT, SlimefunItems.LEAD_INGOT, SlimefunItems.LEAD_INGOT,
             SlimefunItems.LEAD_INGOT, SlimefunItems.LEAD_INGOT, SlimefunItems.LEAD_INGOT
         } ).register ( qs );
-        new UnplaceableBlock ( C.QS_YSCL, QS_ER_JIE_NO_SUO_QIAN, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_YSCL, QS_ER_JIE_NO_SUO_QIAN, YaSuoGongChang.QS_YA_SUO_GONG_CHANG, new ItemStack[]{
             QS_YI_JIE_NO_SUO_QIAN, QS_YI_JIE_NO_SUO_QIAN, QS_YI_JIE_NO_SUO_QIAN,
             QS_YI_JIE_NO_SUO_QIAN, QS_YI_JIE_NO_SUO_QIAN, QS_YI_JIE_NO_SUO_QIAN,
             QS_YI_JIE_NO_SUO_QIAN, QS_YI_JIE_NO_SUO_QIAN, QS_YI_JIE_NO_SUO_QIAN
         } ).register ( qs );
-        new UnplaceableBlock ( C.QS_YSCL, QS_SAN_JIE_NO_SUO_QIAN, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_YSCL, QS_SAN_JIE_NO_SUO_QIAN, YaSuoGongChang.QS_YA_SUO_GONG_CHANG, new ItemStack[]{
             QS_ER_JIE_NO_SUO_QIAN, QS_ER_JIE_NO_SUO_QIAN, QS_ER_JIE_NO_SUO_QIAN,
             QS_ER_JIE_NO_SUO_QIAN, QS_ER_JIE_NO_SUO_QIAN, QS_ER_JIE_NO_SUO_QIAN,
             QS_ER_JIE_NO_SUO_QIAN, QS_ER_JIE_NO_SUO_QIAN, QS_ER_JIE_NO_SUO_QIAN
         } ).register ( qs );
-        new UnplaceableBlock ( C.QS_YSCL, QS_SI_JIE_NO_SUO_QIAN, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_YSCL, QS_SI_JIE_NO_SUO_QIAN, YaSuoGongChang.QS_YA_SUO_GONG_CHANG, new ItemStack[]{
             QS_SAN_JIE_NO_SUO_QIAN, QS_SAN_JIE_NO_SUO_QIAN, QS_SAN_JIE_NO_SUO_QIAN,
             QS_SAN_JIE_NO_SUO_QIAN, QS_SAN_JIE_NO_SUO_QIAN, QS_SAN_JIE_NO_SUO_QIAN,
             QS_SAN_JIE_NO_SUO_QIAN, QS_SAN_JIE_NO_SUO_QIAN, QS_SAN_JIE_NO_SUO_QIAN
         } ).register ( qs );
-        new UnplaceableBlock ( C.QS_YSCL, QS_WU_JIE_NO_SUO_QIAN, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_YSCL, QS_WU_JIE_NO_SUO_QIAN, YaSuoGongChang.QS_YA_SUO_GONG_CHANG, new ItemStack[]{
             QS_SI_JIE_NO_SUO_QIAN, QS_SI_JIE_NO_SUO_QIAN, QS_SI_JIE_NO_SUO_QIAN,
             QS_SI_JIE_NO_SUO_QIAN, QS_SI_JIE_NO_SUO_QIAN, QS_SI_JIE_NO_SUO_QIAN,
             QS_SI_JIE_NO_SUO_QIAN, QS_SI_JIE_NO_SUO_QIAN, QS_SI_JIE_NO_SUO_QIAN
         } ).register ( qs );
 
 //银
-        new UnplaceableBlock ( C.QS_YSCL, QS_YI_JIE_NO_SUO_YIN, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_YSCL, QS_YI_JIE_NO_SUO_YIN, YaSuoGongChang.QS_YA_SUO_GONG_CHANG, new ItemStack[]{
             SlimefunItems.SILVER_INGOT, SlimefunItems.SILVER_INGOT, SlimefunItems.SILVER_INGOT,
             SlimefunItems.SILVER_INGOT, SlimefunItems.SILVER_INGOT, SlimefunItems.SILVER_INGOT,
             SlimefunItems.SILVER_INGOT, SlimefunItems.SILVER_INGOT, SlimefunItems.SILVER_INGOT
         } ).register ( qs );
-        new UnplaceableBlock ( C.QS_YSCL, QS_ER_JIE_NO_SUO_YIN, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_YSCL, QS_ER_JIE_NO_SUO_YIN, YaSuoGongChang.QS_YA_SUO_GONG_CHANG, new ItemStack[]{
             QS_YI_JIE_NO_SUO_YIN, QS_YI_JIE_NO_SUO_YIN, QS_YI_JIE_NO_SUO_YIN,
             QS_YI_JIE_NO_SUO_YIN, QS_YI_JIE_NO_SUO_YIN, QS_YI_JIE_NO_SUO_YIN,
             QS_YI_JIE_NO_SUO_YIN, QS_YI_JIE_NO_SUO_YIN, QS_YI_JIE_NO_SUO_YIN
         } ).register ( qs );
-        new UnplaceableBlock ( C.QS_YSCL, QS_SAN_JIE_NO_SUO_YIN, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_YSCL, QS_SAN_JIE_NO_SUO_YIN, YaSuoGongChang.QS_YA_SUO_GONG_CHANG, new ItemStack[]{
             QS_ER_JIE_NO_SUO_YIN, QS_ER_JIE_NO_SUO_YIN, QS_ER_JIE_NO_SUO_YIN,
             QS_ER_JIE_NO_SUO_YIN, QS_ER_JIE_NO_SUO_YIN, QS_ER_JIE_NO_SUO_YIN,
             QS_ER_JIE_NO_SUO_YIN, QS_ER_JIE_NO_SUO_YIN, QS_ER_JIE_NO_SUO_YIN
         } ).register ( qs );
-        new UnplaceableBlock ( C.QS_YSCL, QS_SI_JIE_NO_SUO_YIN, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_YSCL, QS_SI_JIE_NO_SUO_YIN, YaSuoGongChang.QS_YA_SUO_GONG_CHANG, new ItemStack[]{
             QS_SAN_JIE_NO_SUO_YIN, QS_SAN_JIE_NO_SUO_YIN, QS_SAN_JIE_NO_SUO_YIN,
             QS_SAN_JIE_NO_SUO_YIN, QS_SAN_JIE_NO_SUO_YIN, QS_SAN_JIE_NO_SUO_YIN,
             QS_SAN_JIE_NO_SUO_YIN, QS_SAN_JIE_NO_SUO_YIN, QS_SAN_JIE_NO_SUO_YIN
         } ).register ( qs );
-        new UnplaceableBlock ( C.QS_YSCL, QS_WU_JIE_NO_SUO_YIN, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_YSCL, QS_WU_JIE_NO_SUO_YIN, YaSuoGongChang.QS_YA_SUO_GONG_CHANG, new ItemStack[]{
             QS_SI_JIE_NO_SUO_YIN, QS_SI_JIE_NO_SUO_YIN, QS_SI_JIE_NO_SUO_YIN,
             QS_SI_JIE_NO_SUO_YIN, QS_SI_JIE_NO_SUO_YIN, QS_SI_JIE_NO_SUO_YIN,
             QS_SI_JIE_NO_SUO_YIN, QS_SI_JIE_NO_SUO_YIN, QS_SI_JIE_NO_SUO_YIN
@@ -272,81 +272,81 @@ public class QingShanYaSuoCaiLiao {
 
 
 //铝
-        new UnplaceableBlock ( C.QS_YSCL, QS_YI_JIE_NO_SUO_LV, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_YSCL, QS_YI_JIE_NO_SUO_LV, YaSuoGongChang.QS_YA_SUO_GONG_CHANG, new ItemStack[]{
             SlimefunItems.ALUMINUM_INGOT, SlimefunItems.ALUMINUM_INGOT, SlimefunItems.ALUMINUM_INGOT,
             SlimefunItems.ALUMINUM_INGOT, SlimefunItems.ALUMINUM_INGOT, SlimefunItems.ALUMINUM_INGOT,
             SlimefunItems.ALUMINUM_INGOT, SlimefunItems.ALUMINUM_INGOT, SlimefunItems.ALUMINUM_INGOT
         } ).register ( qs );
-        new UnplaceableBlock ( C.QS_YSCL, QS_ER_JIE_NO_SUO_LV, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_YSCL, QS_ER_JIE_NO_SUO_LV, YaSuoGongChang.QS_YA_SUO_GONG_CHANG, new ItemStack[]{
             QS_YI_JIE_NO_SUO_LV, QS_YI_JIE_NO_SUO_LV, QS_YI_JIE_NO_SUO_LV,
             QS_YI_JIE_NO_SUO_LV, QS_YI_JIE_NO_SUO_LV, QS_YI_JIE_NO_SUO_LV,
             QS_YI_JIE_NO_SUO_LV, QS_YI_JIE_NO_SUO_LV, QS_YI_JIE_NO_SUO_LV
         } ).register ( qs );
-        new UnplaceableBlock ( C.QS_YSCL, QS_SAN_JIE_NO_SUO_LV, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_YSCL, QS_SAN_JIE_NO_SUO_LV, YaSuoGongChang.QS_YA_SUO_GONG_CHANG, new ItemStack[]{
             QS_ER_JIE_NO_SUO_LV, QS_ER_JIE_NO_SUO_LV, QS_ER_JIE_NO_SUO_LV,
             QS_ER_JIE_NO_SUO_LV, QS_ER_JIE_NO_SUO_LV, QS_ER_JIE_NO_SUO_LV,
             QS_ER_JIE_NO_SUO_LV, QS_ER_JIE_NO_SUO_LV, QS_ER_JIE_NO_SUO_LV
         } ).register ( qs );
-        new UnplaceableBlock ( C.QS_YSCL, QS_SI_JIE_NO_SUO_LV, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_YSCL, QS_SI_JIE_NO_SUO_LV, YaSuoGongChang.QS_YA_SUO_GONG_CHANG, new ItemStack[]{
             QS_SAN_JIE_NO_SUO_LV, QS_SAN_JIE_NO_SUO_LV, QS_SAN_JIE_NO_SUO_LV,
             QS_SAN_JIE_NO_SUO_LV, QS_SAN_JIE_NO_SUO_LV, QS_SAN_JIE_NO_SUO_LV,
             QS_SAN_JIE_NO_SUO_LV, QS_SAN_JIE_NO_SUO_LV, QS_SAN_JIE_NO_SUO_LV
         } ).register ( qs );
-        new UnplaceableBlock ( C.QS_YSCL, QS_WU_JIE_NO_SUO_LV, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_YSCL, QS_WU_JIE_NO_SUO_LV, YaSuoGongChang.QS_YA_SUO_GONG_CHANG, new ItemStack[]{
             QS_SI_JIE_NO_SUO_LV, QS_SI_JIE_NO_SUO_LV, QS_SI_JIE_NO_SUO_LV,
             QS_SI_JIE_NO_SUO_LV, QS_SI_JIE_NO_SUO_LV, QS_SI_JIE_NO_SUO_LV,
             QS_SI_JIE_NO_SUO_LV, QS_SI_JIE_NO_SUO_LV, QS_SI_JIE_NO_SUO_LV
         } ).register ( qs );
 
 //锌
-        new UnplaceableBlock ( C.QS_YSCL, QS_YI_JIE_NO_SUO_XIN, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_YSCL, QS_YI_JIE_NO_SUO_XIN, YaSuoGongChang.QS_YA_SUO_GONG_CHANG, new ItemStack[]{
             SlimefunItems.ZINC_INGOT, SlimefunItems.ZINC_INGOT, SlimefunItems.ZINC_INGOT,
             SlimefunItems.ZINC_INGOT, SlimefunItems.ZINC_INGOT, SlimefunItems.ZINC_INGOT,
             SlimefunItems.ZINC_INGOT, SlimefunItems.ZINC_INGOT, SlimefunItems.ZINC_INGOT
         } ).register ( qs );
-        new UnplaceableBlock ( C.QS_YSCL, QS_ER_JIE_NO_SUO_XIN, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_YSCL, QS_ER_JIE_NO_SUO_XIN, YaSuoGongChang.QS_YA_SUO_GONG_CHANG, new ItemStack[]{
             QS_YI_JIE_NO_SUO_XIN, QS_YI_JIE_NO_SUO_XIN, QS_YI_JIE_NO_SUO_XIN,
             QS_YI_JIE_NO_SUO_XIN, QS_YI_JIE_NO_SUO_XIN, QS_YI_JIE_NO_SUO_XIN,
             QS_YI_JIE_NO_SUO_XIN, QS_YI_JIE_NO_SUO_XIN, QS_YI_JIE_NO_SUO_XIN
         } ).register ( qs );
-        new UnplaceableBlock ( C.QS_YSCL, QS_SAN_JIE_NO_SUO_XIN, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_YSCL, QS_SAN_JIE_NO_SUO_XIN, YaSuoGongChang.QS_YA_SUO_GONG_CHANG, new ItemStack[]{
             QS_ER_JIE_NO_SUO_XIN, QS_ER_JIE_NO_SUO_XIN, QS_ER_JIE_NO_SUO_XIN,
             QS_ER_JIE_NO_SUO_XIN, QS_ER_JIE_NO_SUO_XIN, QS_ER_JIE_NO_SUO_XIN,
             QS_ER_JIE_NO_SUO_XIN, QS_ER_JIE_NO_SUO_XIN, QS_ER_JIE_NO_SUO_XIN
         } ).register ( qs );
-        new UnplaceableBlock ( C.QS_YSCL, QS_SI_JIE_NO_SUO_XIN, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_YSCL, QS_SI_JIE_NO_SUO_XIN, YaSuoGongChang.QS_YA_SUO_GONG_CHANG, new ItemStack[]{
             QS_SAN_JIE_NO_SUO_XIN, QS_SAN_JIE_NO_SUO_XIN, QS_SAN_JIE_NO_SUO_XIN,
             QS_SAN_JIE_NO_SUO_XIN, QS_SAN_JIE_NO_SUO_XIN, QS_SAN_JIE_NO_SUO_XIN,
             QS_SAN_JIE_NO_SUO_XIN, QS_SAN_JIE_NO_SUO_XIN, QS_SAN_JIE_NO_SUO_XIN
         } ).register ( qs );
-        new UnplaceableBlock ( C.QS_YSCL, QS_WU_JIE_NO_SUO_XIN, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_YSCL, QS_WU_JIE_NO_SUO_XIN, YaSuoGongChang.QS_YA_SUO_GONG_CHANG, new ItemStack[]{
             QS_SI_JIE_NO_SUO_XIN, QS_SI_JIE_NO_SUO_XIN, QS_SI_JIE_NO_SUO_XIN,
             QS_SI_JIE_NO_SUO_XIN, QS_SI_JIE_NO_SUO_XIN, QS_SI_JIE_NO_SUO_XIN,
             QS_SI_JIE_NO_SUO_XIN, QS_SI_JIE_NO_SUO_XIN, QS_SI_JIE_NO_SUO_XIN
         } ).register ( qs );
 
 //锌
-        new UnplaceableBlock ( C.QS_YSCL, QS_YI_JIE_NO_SUO_MEI, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_YSCL, QS_YI_JIE_NO_SUO_MEI, YaSuoGongChang.QS_YA_SUO_GONG_CHANG, new ItemStack[]{
             SlimefunItems.MAGNESIUM_INGOT, SlimefunItems.MAGNESIUM_INGOT, SlimefunItems.MAGNESIUM_INGOT,
             SlimefunItems.MAGNESIUM_INGOT, SlimefunItems.MAGNESIUM_INGOT, SlimefunItems.MAGNESIUM_INGOT,
             SlimefunItems.MAGNESIUM_INGOT, SlimefunItems.MAGNESIUM_INGOT, SlimefunItems.MAGNESIUM_INGOT
         } ).register ( qs );
-        new UnplaceableBlock ( C.QS_YSCL, QS_ER_JIE_NO_SUO_MEI, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_YSCL, QS_ER_JIE_NO_SUO_MEI, YaSuoGongChang.QS_YA_SUO_GONG_CHANG, new ItemStack[]{
             QS_YI_JIE_NO_SUO_MEI, QS_YI_JIE_NO_SUO_MEI, QS_YI_JIE_NO_SUO_MEI,
             QS_YI_JIE_NO_SUO_MEI, QS_YI_JIE_NO_SUO_MEI, QS_YI_JIE_NO_SUO_MEI,
             QS_YI_JIE_NO_SUO_MEI, QS_YI_JIE_NO_SUO_MEI, QS_YI_JIE_NO_SUO_MEI
         } ).register ( qs );
-        new UnplaceableBlock ( C.QS_YSCL, QS_SAN_JIE_NO_SUO_MEI, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_YSCL, QS_SAN_JIE_NO_SUO_MEI, YaSuoGongChang.QS_YA_SUO_GONG_CHANG, new ItemStack[]{
             QS_ER_JIE_NO_SUO_MEI, QS_ER_JIE_NO_SUO_MEI, QS_ER_JIE_NO_SUO_MEI,
             QS_ER_JIE_NO_SUO_MEI, QS_ER_JIE_NO_SUO_MEI, QS_ER_JIE_NO_SUO_MEI,
             QS_ER_JIE_NO_SUO_MEI, QS_ER_JIE_NO_SUO_MEI, QS_ER_JIE_NO_SUO_MEI
         } ).register ( qs );
-        new UnplaceableBlock ( C.QS_YSCL, QS_SI_JIE_NO_SUO_MEI, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_YSCL, QS_SI_JIE_NO_SUO_MEI, YaSuoGongChang.QS_YA_SUO_GONG_CHANG, new ItemStack[]{
             QS_SAN_JIE_NO_SUO_MEI, QS_SAN_JIE_NO_SUO_MEI, QS_SAN_JIE_NO_SUO_MEI,
             QS_SAN_JIE_NO_SUO_MEI, QS_SAN_JIE_NO_SUO_MEI, QS_SAN_JIE_NO_SUO_MEI,
             QS_SAN_JIE_NO_SUO_MEI, QS_SAN_JIE_NO_SUO_MEI, QS_SAN_JIE_NO_SUO_MEI
         } ).register ( qs );
-        new UnplaceableBlock ( C.QS_YSCL, QS_WU_JIE_NO_SUO_MEI, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_YSCL, QS_WU_JIE_NO_SUO_MEI, YaSuoGongChang.QS_YA_SUO_GONG_CHANG, new ItemStack[]{
             QS_SI_JIE_NO_SUO_MEI, QS_SI_JIE_NO_SUO_MEI, QS_SI_JIE_NO_SUO_MEI,
             QS_SI_JIE_NO_SUO_MEI, QS_SI_JIE_NO_SUO_MEI, QS_SI_JIE_NO_SUO_MEI,
             QS_SI_JIE_NO_SUO_MEI, QS_SI_JIE_NO_SUO_MEI, QS_SI_JIE_NO_SUO_MEI
