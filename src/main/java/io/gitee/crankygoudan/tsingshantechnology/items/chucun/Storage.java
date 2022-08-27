@@ -11,13 +11,19 @@ import io.gitee.crankygoudan.tsingshantechnology.utils.Y;
 import io.github.mooy1.infinitylib.machines.MachineLore;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
+import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
 
 import lombok.experimental.UtilityClass;
+
+import static io.gitee.crankygoudan.tsingshantechnology.zhuceleibiao.cailiaozhuce.QingShanCaiLiao.*;
+import static io.gitee.crankygoudan.tsingshantechnology.zhuceleibiao.cailiaozhuce.QingShanYaSuoCaiLiao.*;
 
 @UtilityClass
 public final class Storage {
 
-
+    /**
+     * 存储制造机
+     */
     public static final SlimefunItemStack QS_RO_HE_BAO_XIANG = new SlimefunItemStack(
             "QS_RO_HE_BAO_XIANG ",
             Material.HORN_CORAL_BLOCK,
@@ -25,6 +31,9 @@ public final class Storage {
         Y.colorPseudorandomString ("制造或升级箱子"),
         Y.colorPseudorandomString ("必须放在水周围")
     );
+    /**
+     * 这是存储的容量
+     */
     private static final int MU_XIANG = 5000;
     private static final int TIE_XIANG = 58611;
     private static final int JIN_XIANG = 108611;
@@ -39,7 +48,9 @@ public final class Storage {
     private static final int DA_LI_SHI_SHI_SHI_REN_WU_BAO_XIANG = 1501008611;
     private static final int WU_XIAO_DE_SHI_SHI_REN_WU_BAO_XIANG = 2001008611;
 
-
+    /**
+     * 存储注册
+     */
     public static final SlimefunItemStack QS_MU_XIANG = new SlimefunItemStack(
         "QS_MU_XIANG",
         T.QS_MU_XIANG,
@@ -125,78 +136,85 @@ public final class Storage {
         Y.colorPseudorandomString("容量： ") + MachineLore.format(WU_XIAO_DE_SHI_SHI_REN_WU_BAO_XIANG) + Y.colorPseudorandomString (" 个物品")
     );
 
-
+    /**
+     * 存储合成机 和存储配方
+     */
     public static void setup(TsingshanTechnology qs) {
-        new StorageForge( C.QS_CC, QS_RO_HE_BAO_XIANG, RecipeType.NULL, new ItemStack[] {
-            null, null, null,
-            null, null, null,
-            null, null, null
-        }).register(qs);
+
+        new StorageForge( C.QS_CC, QS_RO_HE_BAO_XIANG, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
+            SlimefunItems.REINFORCED_ALLOY_INGOT, SlimefunItems.ELECTRIC_MOTOR, SlimefunItems.REINFORCED_ALLOY_INGOT,
+            SlimefunItems.HARDENED_GLASS, new ItemStack ( Material.CRAFTING_TABLE), SlimefunItems.HARDENED_GLASS,
+            SlimefunItems.REINFORCED_ALLOY_INGOT, SlimefunItems.ELECTRIC_MOTOR, SlimefunItems.REINFORCED_ALLOY_INGOT
+        }).register(qs);//这个是存储合成机
+
+        /**
+         * 下面写存储的配方
+         */
 
         new StorageUnit(QS_MU_XIANG, MU_XIANG, new ItemStack[] {
-            null, null, null,
-            null, null, null,
-            null, null, null
+            SlimefunItems.REINFORCED_ALLOY_INGOT, new ItemStack ( Material.OAK_PLANKS), SlimefunItems.REINFORCED_ALLOY_INGOT,
+            new ItemStack ( Material.OAK_PLANKS), new ItemStack ( Material.CHEST), new ItemStack ( Material.OAK_PLANKS),
+            SlimefunItems.REINFORCED_ALLOY_INGOT, new ItemStack ( Material.OAK_PLANKS), SlimefunItems.REINFORCED_ALLOY_INGOT
         }).register(qs);
         new StorageUnit(QS_TIE_XIANG, TIE_XIANG, new ItemStack[] {
-            null, null, null,
-            null, null, null,
-            null, null, null
+            QS_ER_JIE_NO_SUO_TIE, QS_ER_JIE_NO_SUO_TIE, QS_ER_JIE_NO_SUO_TIE,
+            QS_ER_JIE_NO_SUO_TIE, QS_MU_XIANG, QS_ER_JIE_NO_SUO_TIE,
+            QS_ER_JIE_NO_SUO_TIE, QS_ER_JIE_NO_SUO_TIE, QS_ER_JIE_NO_SUO_TIE
         }).register(qs);
         new StorageUnit(QS_JIN_XIANG, JIN_XIANG, new ItemStack[] {
-            null, null, null,
-            null, null, null,
-            null, null, null
+            QS_ER_JIE_NO_SUO_JIN, QS_ER_JIE_NO_SUO_JIN, QS_ER_JIE_NO_SUO_JIN,
+            QS_ER_JIE_NO_SUO_JIN, QS_TIE_XIANG, QS_ER_JIE_NO_SUO_JIN,
+            QS_ER_JIE_NO_SUO_JIN, QS_ER_JIE_NO_SUO_JIN, QS_ER_JIE_NO_SUO_JIN
         }).register(qs);
         new StorageUnit(QS_ZUAN_SHI_XIANG, ZUAN_SHI_XIANG, new ItemStack[] {
-            null, null, null,
-            null, null, null,
-            null, null, null
+            QS_DAIDAI_DE_ZUAN_SHI_KUAI, QS_DAIDAI_DE_ZUAN_SHI_KUAI, QS_DAIDAI_DE_ZUAN_SHI_KUAI,
+            QS_DAIDAI_DE_ZUAN_SHI_KUAI, QS_JIN_XIANG, QS_DAIDAI_DE_ZUAN_SHI_KUAI,
+            QS_DAIDAI_DE_ZUAN_SHI_KUAI, QS_DAIDAI_DE_ZUAN_SHI_KUAI, QS_DAIDAI_DE_ZUAN_SHI_KUAI
         }).register(qs);
         new StorageUnit(QS_CHU_XUE_ZHE_BAO_XIANG, CHU_XUE_ZHE_BAO_XIANG, new ItemStack[] {
-            null, null, null,
-            null, null, null,
-            null, null, null
+            QS_YI_JIE_YUAN_SU_JIE_JING, QS_YI_JIE_YUAN_SU_JIE_JING, QS_YI_JIE_YUAN_SU_JIE_JING,
+            QS_YI_JIE_YUAN_SU_JIE_JING, QS_ZUAN_SHI_XIANG, QS_YI_JIE_YUAN_SU_JIE_JING,
+            QS_YI_JIE_YUAN_SU_JIE_JING, QS_YI_JIE_YUAN_SU_JIE_JING, QS_YI_JIE_YUAN_SU_JIE_JING
         }).register(qs);
         new StorageUnit(QS_BIAO_ZHUN_REN_WU_BAO_XIANG, BIAO_ZHUN_REN_WU_BAO_XIANG, new ItemStack[] {
-            null, null, null,
-            null, null, null,
-            null, null, null
+            QS_ER_JIE_YUAN_SU_JIE_JING, QS_ER_JIE_YUAN_SU_JIE_JING, QS_ER_JIE_YUAN_SU_JIE_JING,
+            QS_ER_JIE_YUAN_SU_JIE_JING, QS_CHU_XUE_ZHE_BAO_XIANG, QS_ER_JIE_YUAN_SU_JIE_JING,
+            QS_ER_JIE_YUAN_SU_JIE_JING, QS_ER_JIE_YUAN_SU_JIE_JING, QS_ER_JIE_YUAN_SU_JIE_JING
         }).register(qs);
         new StorageUnit(QS_QIANG_DA_DE_REN_WU_BAO_XIANG, QIANG_DA_DE_REN_WU_BAO_XIANG, new ItemStack[] {
-            null, null, null,
-            null, null, null,
-            null, null, null
+            QS_SAN_JIE_YUAN_SU_JIE_JING, QS_SAN_JIE_YUAN_SU_JIE_JING, QS_SAN_JIE_YUAN_SU_JIE_JING,
+            QS_SAN_JIE_YUAN_SU_JIE_JING, QS_BIAO_ZHUN_REN_WU_BAO_XIANG, QS_SAN_JIE_YUAN_SU_JIE_JING,
+            QS_SAN_JIE_YUAN_SU_JIE_JING, QS_SAN_JIE_YUAN_SU_JIE_JING, QS_SAN_JIE_YUAN_SU_JIE_JING
         }).register(qs);
         new StorageUnit(QS_JIE_JING_SHI_SHI_REN_WU_BAO_XIANG, JIE_JING_SHI_SHI_REN_WU_BAO_XIANG, new ItemStack[] {
-            null, null, null,
-            null, null, null,
-            null, null, null
+            QS_SI_JIE_YUAN_SU_JIE_JING, QS_SI_JIE_YUAN_SU_JIE_JING, QS_SI_JIE_YUAN_SU_JIE_JING,
+            QS_SI_JIE_YUAN_SU_JIE_JING, QS_QIANG_DA_DE_REN_WU_BAO_XIANG, QS_SI_JIE_YUAN_SU_JIE_JING,
+            QS_SI_JIE_YUAN_SU_JIE_JING, QS_SI_JIE_YUAN_SU_JIE_JING, QS_SI_JIE_YUAN_SU_JIE_JING
         }).register(qs);
         new StorageUnit(QS_MI_FENG_SHI_SHI_REN_WU_BAO_XIANG, MI_FENG_SHI_SHI_REN_WU_BAO_XIANG, new ItemStack[] {
-            null, null, null,
-            null, null, null,
-            null, null, null
+            QS_WU_JIE_YUAN_SU_JIE_JING, QS_WU_JIE_YUAN_SU_JIE_JING, QS_WU_JIE_YUAN_SU_JIE_JING,
+            QS_WU_JIE_YUAN_SU_JIE_JING, QS_JIE_JING_SHI_SHI_REN_WU_BAO_XIANG, QS_WU_JIE_YUAN_SU_JIE_JING,
+            QS_WU_JIE_YUAN_SU_JIE_JING, QS_WU_JIE_YUAN_SU_JIE_JING, QS_WU_JIE_YUAN_SU_JIE_JING,
         }).register(qs);
         new StorageUnit(QS_HUANG_JIA_SHI_SHI_REN_WU_BAO_XIANG, HUANG_JIA_SHI_SHI_REN_WU_BAO_XIANG, new ItemStack[] {
-            null, null, null,
-            null, null, null,
-            null, null, null
+            QS_QING_SHAN_JING_GANG, QS_QING_SHAN_JING_GANG, QS_QING_SHAN_JING_GANG,
+            QS_QING_SHAN_JING_GANG, QS_MI_FENG_SHI_SHI_REN_WU_BAO_XIANG, QS_QING_SHAN_JING_GANG,
+            QS_QING_SHAN_JING_GANG, QS_QING_SHAN_JING_GANG, QS_QING_SHAN_JING_GANG
         }).register(qs);
         new StorageUnit(QS_XIE_JIAO_SHI_SHI_REN_WU_BAO_XIANG, XIE_JIAO_SHI_SHI_REN_WU_BAO_XIANG, new ItemStack[] {
-            null, null, null,
-            null, null, null,
-            null, null, null
+            QS_QING_SHAN_PAO_MO, QS_QING_SHAN_PAO_MO, QS_QING_SHAN_PAO_MO,
+            QS_QING_SHAN_PAO_MO, QS_HUANG_JIA_SHI_SHI_REN_WU_BAO_XIANG, QS_QING_SHAN_PAO_MO,
+            QS_QING_SHAN_PAO_MO, QS_QING_SHAN_PAO_MO, QS_QING_SHAN_PAO_MO
         }).register(qs);
         new StorageUnit(QS_DA_LI_SHI_SHI_SHI_REN_WU_BAO_XIANG, DA_LI_SHI_SHI_SHI_REN_WU_BAO_XIANG, new ItemStack[] {
-            null, null, null,
-            null, null, null,
-            null, null, null
+            QS_QING_SHAN_HE_JIN, QS_QING_SHAN_HE_JIN, QS_QING_SHAN_HE_JIN,
+            QS_QING_SHAN_HE_JIN, QS_DA_LI_SHI_SHI_SHI_REN_WU_BAO_XIANG, QS_QING_SHAN_HE_JIN,
+            QS_QING_SHAN_HE_JIN, QS_QING_SHAN_HE_JIN, QS_QING_SHAN_HE_JIN
         }).register(qs);
         new StorageUnit(QS_WU_XIAO_DE_SHI_SHI_REN_WU_BAO_XIANG, WU_XIAO_DE_SHI_SHI_REN_WU_BAO_XIANG, new ItemStack[] {
-            null, null, null,
-            null, null, null,
-            null, null, null
+            QS_QING_SHAN_SHUI_JING, QS_QING_SHAN_SHUI_JING, QS_QING_SHAN_SHUI_JING,
+            QS_QING_SHAN_SHUI_JING, QS_DA_LI_SHI_SHI_SHI_REN_WU_BAO_XIANG, QS_QING_SHAN_SHUI_JING,
+            QS_QING_SHAN_SHUI_JING, QS_QING_SHAN_SHUI_JING, QS_QING_SHAN_SHUI_JING
         }).register(qs);
     }
 

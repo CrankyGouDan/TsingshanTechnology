@@ -95,7 +95,7 @@ public class QingShanGongChang extends MultiBlockMachine {
             dispenser.getWorld().dropItem(b.getLocation(), output);
             Slimefun.getLocalization().sendMessage(p, "machines.full-inventory", true);
         }
-        p.sendMessage(Y.colorPseudorandomString (" " + output.getItemMeta().getDisplayName() + "合成成功!"));
+        p.sendMessage(("" + output.getItemMeta().getDisplayName() + Y.colorRandomString("合成成功!")));
     }
 
     public void craftItem(Inventory inv, ItemStack[] recipe, Block b){

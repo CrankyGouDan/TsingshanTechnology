@@ -72,7 +72,10 @@ public class QingShanCaiLiao {
     public static final SlimefunItemStack QS_GAO_JIE_XIA_JIE = new SlimefunItemStack ( "QS_GAO_JIE_XIA_JIE",Material.NETHER_STAR, Y.colorPseudorandomString ("高阶下届之星") + " " + Y.colorPseudorandomString(" "), Y.colorPseudorandomString("  "),Y.colorPseudorandomString("难得的材料"));
     public static final SlimefunItemStack QS_QIANG_HUA_DIN = new SlimefunItemStack ( "QS_QIANG_HUA_DIN",T.QS_QIANG_HUA_DIN, Y.colorPseudorandomString ("强化锭") + " " + Y.colorPseudorandomString(" "), Y.colorPseudorandomString("  "),Y.colorPseudorandomString("难得的材料"));
     public static final SlimefunItemStack QS_QIANG_HUA_BAN = new SlimefunItemStack ( "QS_QIANG_HUA_BAN",T.QS_QIANG_HUA_BAN, Y.colorPseudorandomString ("强化板") + " " + Y.colorPseudorandomString(" "), Y.colorPseudorandomString("  "),Y.colorPseudorandomString("难得的材料"));
+
+
     public static void setup(TsingshanTechnology qs) {
+
 
         new UnplaceableBlock ( C.QS_CL, QS_DAIDAI_DE_TIE_KUAI, QingShanGongChang.QS_GONG_CHANG, new ItemStack[]{
             new ItemStack ( Material.IRON_BLOCK,64 ), new ItemStack ( Material.IRON_BLOCK,64 ),new ItemStack ( Material.IRON_BLOCK,64 ),
@@ -335,6 +338,8 @@ public class QingShanCaiLiao {
             null, null, null,
             null, null, null
         }).register ( qs );
+
+
 
 
 

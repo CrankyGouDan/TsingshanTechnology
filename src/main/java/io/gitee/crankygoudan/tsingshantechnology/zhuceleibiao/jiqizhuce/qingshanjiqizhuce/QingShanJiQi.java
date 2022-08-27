@@ -268,6 +268,12 @@ public class QingShanJiQi {
         Y.colorPseudorandomString ( "青山工厂" )
     );
 
+    public static final SlimefunItemStack QS_QUAN_XI_BIAN_ZHI_QI = new SlimefunItemStack (
+        "QS_QUAN_XI_BIAN_ZHI_QI",
+        Material.SEA_LANTERN,
+        Y.colorPseudorandomString ("多彩全息投影仪") + " " + Y.colorPseudorandomString(" "),
+        Y.colorPseudorandomString(" "),
+        Y.colorPseudorandomString("随机颜色"));
 
     public static void setup(TsingshanTechnology qs) {
 
@@ -529,6 +535,12 @@ public class QingShanJiQi {
         }).register ( qs );
 
 
+        new QingShanQuanXi (C.QS_JQ, QS_QUAN_XI_BIAN_ZHI_QI, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
+            SlimefunItems.ALUMINUM_BRASS_INGOT, SlimefunItems.POWER_CRYSTAL, SlimefunItems.HOLOGRAM_PROJECTOR,
+            SlimefunItems.HEATING_COIL, SlimefunItems.ALUMINUM_BRASS_INGOT, SlimefunItems.HEATING_COIL,
+            SlimefunItems.HOLOGRAM_PROJECTOR, SlimefunItems.POWER_CRYSTAL, SlimefunItems.HOLOGRAM_PROJECTOR,},
+            new SlimefunItemStack( QS_QUAN_XI_BIAN_ZHI_QI,1))
+            .register(qs);
 
     }
 }

@@ -11,6 +11,7 @@ import io.gitee.crankygoudan.tsingshantechnology.utils.Y;
 import io.github.mooy1.infinitylib.machines.MachineLore;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
+import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
 
 import lombok.experimental.UtilityClass;
 
@@ -19,7 +20,7 @@ import static io.gitee.crankygoudan.tsingshantechnology.zhuceleibiao.cailiaozhuc
 @UtilityClass
 public final class QingShanFaDianJi {
 
-
+    private static final int FULIFADIANJI_FDL = 40_000;
     private static final int PAOPAOFADIANJI_FDL = 50_000;
     private static final int FADIANJI_FDL_1 = 600000;
     private static final int FADIANJI_FDL_2 = 7500000;
@@ -28,6 +29,20 @@ public final class QingShanFaDianJi {
     private static final int FADIANJI_FDL_5 = 500000000;
     private static final int FADIANJI_FDL_6 = 750000000;
     private static final int FADIANJI_FDL_7 = 1000000000;
+
+    public static final SlimefunItemStack QS_FU_LI_FA_DIAN_JI = new SlimefunItemStack (
+        "QS_FU_LI_FA_DIAN_JI",
+        T.QS_PAO_PAO_FA_DIAN_JI,
+        Y.colorPseudorandomString ("福利电机") + " " + Y.colorPseudorandomString(" "),
+        Y.colorPseudorandomString("   "),
+        Y.colorPseudorandomString("良心腐竹给大家的福利"),
+        Y.colorPseudorandomString("可在任意时间发电"),
+        Y.colorPseudorandomString("太阳能发电机,需要露天"),
+        Y.colorPseudorandomString("挖掘后较容易损坏"),
+        Y.colorPseudorandomString("挖掘过造成损坏损失紫行承担"),
+        MachineLore.energyBuffer(FULIFADIANJI_FDL ),
+        MachineLore.energyPerSecond(FULIFADIANJI_FDL)
+    );
 
     public static final SlimefunItemStack QS_PAO_PAO_FA_DIAN_JI = new SlimefunItemStack (
         "QS_PAO_PAO_FA_DIAN_JI",
@@ -134,6 +149,12 @@ public final class QingShanFaDianJi {
 
 
 
+        new EnergyGenerator ( C.QS_FDJ, QS_FU_LI_FA_DIAN_JI, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+            SlimefunItems.SOLAR_GENERATOR_4, SlimefunItems.SOLAR_GENERATOR_4, SlimefunItems.SOLAR_GENERATOR_4,
+            SlimefunItems.SOLAR_GENERATOR_4, SlimefunItems.ENERGIZED_CAPACITOR, SlimefunItems.SOLAR_GENERATOR_4,
+            SlimefunItems.SOLAR_GENERATOR_4, SlimefunItems.SOLAR_GENERATOR_4, SlimefunItems.SOLAR_GENERATOR_4
+        }, FULIFADIANJI_FDL, GenerationType.PAOPAOFADIANJI).register(qs);
+
         new EnergyGenerator ( C.QS_FDJ, QS_PAO_PAO_FA_DIAN_JI, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
             QS_SAN_JIE_YUAN_SU_JIE_JING, QS_SAN_JIE_YUAN_SU_JIE_JING, QS_SAN_JIE_YUAN_SU_JIE_JING,
             QS_SAN_JIE_YUAN_SU_JIE_JING, QS_JI_YAN, QS_SAN_JIE_YUAN_SU_JIE_JING,
@@ -165,21 +186,21 @@ public final class QingShanFaDianJi {
         }, FADIANJI_FDL_4, GenerationType.I_FADIANJI_FDL).register(qs);
 
         new EnergyGenerator ( C.QS_FDJ, QS_VIP_FA_DIAN_JI, RecipeType.NULL, new ItemStack[]{
-            null,null,null,
-            null,null,null,
-            null,null,null,
+            QS_QING_SHAN_SHUI_JING, QS_QING_SHAN_SHUI_JING, QS_QING_SHAN_SHUI_JING,
+            QS_QING_SHAN_SHUI_JING, QS_QING_SHAN_SHUI_JING, QS_QING_SHAN_SHUI_JING,
+            QS_QING_SHAN_SHUI_JING, QS_QING_SHAN_SHUI_JING, QS_QING_SHAN_SHUI_JING,
         }, FADIANJI_FDL_5, GenerationType.I_FADIANJI_FDL).register(qs);
 
         new EnergyGenerator ( C.QS_FDJ, QS_MVP_FA_DIAN_JI, RecipeType.NULL, new ItemStack[]{
-            null,null,null,
-            null,null,null,
-            null,null,null,
+            QS_QING_SHAN_SHUI_JING, QS_QING_SHAN_SHUI_JING, QS_QING_SHAN_SHUI_JING,
+            QS_QING_SHAN_SHUI_JING, QS_QING_SHAN_SHUI_JING, QS_QING_SHAN_SHUI_JING,
+            QS_QING_SHAN_SHUI_JING, QS_QING_SHAN_SHUI_JING, QS_QING_SHAN_SHUI_JING,
         }, FADIANJI_FDL_6, GenerationType.I_FADIANJI_FDL).register(qs);
 
         new EnergyGenerator ( C.QS_FDJ, QS_PRO_FA_DIAN_JI, RecipeType.NULL, new ItemStack[]{
-            null,null,null,
-            null,null,null,
-            null,null,null,
+            QS_QING_SHAN_SHUI_JING, QS_QING_SHAN_SHUI_JING, QS_QING_SHAN_SHUI_JING,
+            QS_QING_SHAN_SHUI_JING, QS_QING_SHAN_SHUI_JING, QS_QING_SHAN_SHUI_JING,
+            QS_QING_SHAN_SHUI_JING, QS_QING_SHAN_SHUI_JING, QS_QING_SHAN_SHUI_JING,
         }, FADIANJI_FDL_6, GenerationType.I_FADIANJI_FDL).register(qs);
 
 
