@@ -127,9 +127,9 @@ public class QingShanCaiLiao {
             QS_GAO_JIE_LONG_DAN, QS_GAO_JIE_LONG_DAN, QS_GAO_JIE_LONG_DAN,
             QS_GAO_JIE_LONG_DAN, QS_GAO_JIE_LONG_DAN, QS_GAO_JIE_LONG_DAN
         } ).register ( qs );
-        new UnplaceableBlock ( C.QS_CL, QS_SHI_MO_XI_FEN_CHEN , QingShanRT.QSWP, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_CL, QS_SHI_MO_XI_FEN_CHEN , RecipeType.NULL, new ItemStack[]{
             null, null, null,
-            null, new CustomItemStack( PlayerHead.getItemStack( PlayerSkin.fromHashCode( "a2ac9cbc5befca3a8007a6d0b54b626459d0d510203ea1563a09883a525a747c")), Y.colorPseudorandomString ("一头呆呆："), Y.colorPseudorandomString ( "尊敬勇士的请您 前往青山世界查看！")), null,
+            null, null, null,
             null, null, null
         }).register ( qs );
         new UnplaceableBlock ( C.QS_CL, QS_SHI_MO_XI ,QingShanGongChang.QS_GONG_CHANG, new ItemStack[]{
@@ -147,9 +147,9 @@ public class QingShanCaiLiao {
             QS_SHI_MO_XI_BAN, QS_SHI_MO_XI_BAN, QS_SHI_MO_XI_BAN,
             QS_SHI_MO_XI_BAN, QS_SHI_MO_XI_BAN, QS_SHI_MO_XI_BAN
         }).register ( qs );
-        new UnplaceableBlock ( C.QS_CL, QS_GAO_ZHUAN_SU_MA_DA , QingShanRT.QSWP, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_CL, QS_GAO_ZHUAN_SU_MA_DA , RecipeType.NULL, new ItemStack[]{
             null, null, null,
-            null, new CustomItemStack( PlayerHead.getItemStack( PlayerSkin.fromHashCode( "a2ac9cbc5befca3a8007a6d0b54b626459d0d510203ea1563a09883a525a747c")), Y.colorPseudorandomString ("一头呆呆："), Y.colorPseudorandomString ( "尊敬勇士的请您 前往青山世界查看！")), null,
+            null, null, null,
             null, null, null
         }).register ( qs );
         new UnplaceableBlock ( C.QS_CL, QS_YA_SUO_MA_DA ,QingShanGongChang.QS_GONG_CHANG, new ItemStack[]{
@@ -167,9 +167,9 @@ public class QingShanCaiLiao {
             QS_JI_XIAN_YA_SUO_MA_DA, QS_JI_XIAN_YA_SUO_MA_DA, QS_JI_XIAN_YA_SUO_MA_DA,
             QS_JI_XIAN_YA_SUO_MA_DA, QS_JI_XIAN_YA_SUO_MA_DA, QS_JI_XIAN_YA_SUO_MA_DA
         }).register ( qs );
-        new UnplaceableBlock ( C.QS_CL, QS_FANG_SHENG_SHU_LIAO , QingShanRT.QSWP, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_CL, QS_FANG_SHENG_SHU_LIAO , RecipeType.NULL, new ItemStack[]{
             null, null, null,
-            null, new CustomItemStack( PlayerHead.getItemStack( PlayerSkin.fromHashCode( "a2ac9cbc5befca3a8007a6d0b54b626459d0d510203ea1563a09883a525a747c")), Y.colorPseudorandomString ("一头呆呆："), Y.colorPseudorandomString ( "尊敬勇士的请您 前往青山世界查看！")), null,
+            null, null, null,
             null, null, null
         }).register ( qs );
         new UnplaceableBlock ( C.QS_CL, QS_FANG_SHENG_JIN_SHU,QingShanGongChang.QS_GONG_CHANG, new ItemStack[]{
@@ -182,9 +182,9 @@ public class QingShanCaiLiao {
             QS_FANG_SHENG_JIN_SHU, QS_FANG_SHENG_JIN_SHU, QS_FANG_SHENG_JIN_SHU,
             QS_FANG_SHENG_JIN_SHU, QS_FANG_SHENG_JIN_SHU, QS_FANG_SHENG_JIN_SHU
         }).register ( qs );
-        new UnplaceableBlock ( C.QS_CL, QS_JIN_SHU_PAO_MO , QingShanRT.QSWP, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_CL, QS_JIN_SHU_PAO_MO , RecipeType.NULL, new ItemStack[]{
             null, null, null,
-            null, new CustomItemStack( PlayerHead.getItemStack( PlayerSkin.fromHashCode( "a2ac9cbc5befca3a8007a6d0b54b626459d0d510203ea1563a09883a525a747c")), Y.colorPseudorandomString ("一头呆呆："), Y.colorPseudorandomString ( "尊敬勇士的请您 前往青山世界查看！")), null,
+            null, null, null,
             null, null, null
         }).register ( qs );
         new UnplaceableBlock ( C.QS_CL, QS_YING_HUA_PAO_MO,QingShanGongChang.QS_GONG_CHANG, new ItemStack[]{
@@ -197,9 +197,9 @@ public class QingShanCaiLiao {
             QS_YING_HUA_PAO_MO, QS_YING_HUA_PAO_MO, QS_YING_HUA_PAO_MO,
             QS_YING_HUA_PAO_MO, QS_YING_HUA_PAO_MO, QS_YING_HUA_PAO_MO
         }).register ( qs );
-        new UnplaceableBlock ( C.QS_CL, QS_SAN_YUAN_CUI_HUA_QI , QingShanRT.QSWP, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_CL, QS_SAN_YUAN_CUI_HUA_QI , RecipeType.NULL, new ItemStack[]{
             null, null, null,
-            null, new CustomItemStack( PlayerHead.getItemStack( PlayerSkin.fromHashCode( "a2ac9cbc5befca3a8007a6d0b54b626459d0d510203ea1563a09883a525a747c")), Y.colorPseudorandomString ("一头呆呆："), Y.colorPseudorandomString ( "尊敬勇士的请您 前往青山世界查看！")), null,
+            null, null, null,
             null, null, null
         }).register ( qs );
         new UnplaceableBlock ( C.QS_CL, QS_WU_YUAN_CUI_HUA_QI,QingShanGongChang.QS_GONG_CHANG, new ItemStack[]{
@@ -212,9 +212,9 @@ public class QingShanCaiLiao {
             QS_WU_YUAN_CUI_HUA_QI, QS_WU_YUAN_CUI_HUA_QI, QS_WU_YUAN_CUI_HUA_QI,
             QS_WU_YUAN_CUI_HUA_QI, QS_WU_YUAN_CUI_HUA_QI, QS_WU_YUAN_CUI_HUA_QI
         }).register ( qs );
-        new UnplaceableBlock ( C.QS_CL, QS_BO_JIN_HE_JIN , QingShanRT.QSWP, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_CL, QS_BO_JIN_HE_JIN , RecipeType.NULL, new ItemStack[]{
             null, null, null,
-            null, new CustomItemStack( PlayerHead.getItemStack( PlayerSkin.fromHashCode( "a2ac9cbc5befca3a8007a6d0b54b626459d0d510203ea1563a09883a525a747c")), Y.colorPseudorandomString ("一头呆呆："), Y.colorPseudorandomString ( "尊敬勇士的请您 前往青山世界查看！")), null,
+            null, null, null,
             null, null, null
         }).register ( qs );
         new UnplaceableBlock ( C.QS_CL, QS_GAO_QIANG_DU_HE_JIN,QingShanGongChang.QS_GONG_CHANG, new ItemStack[]{
@@ -227,9 +227,9 @@ public class QingShanCaiLiao {
             QS_GAO_QIANG_DU_HE_JIN, QS_GAO_QIANG_DU_HE_JIN, QS_GAO_QIANG_DU_HE_JIN,
             QS_GAO_QIANG_DU_HE_JIN, QS_GAO_QIANG_DU_HE_JIN, QS_GAO_QIANG_DU_HE_JIN
         }).register ( qs );
-        new UnplaceableBlock ( C.QS_CL, QS_WEI_JIN_GE , QingShanRT.QSWP, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_CL, QS_WEI_JIN_GE , RecipeType.NULL, new ItemStack[]{
             null, null, null,
-            null, new CustomItemStack( PlayerHead.getItemStack( PlayerSkin.fromHashCode( "a2ac9cbc5befca3a8007a6d0b54b626459d0d510203ea1563a09883a525a747c")), Y.colorPseudorandomString ("一头呆呆："), Y.colorPseudorandomString ( "尊敬勇士的请您 前往青山世界查看！")), null,
+            null, null, null,
             null, null, null
         }).register ( qs );
         new UnplaceableBlock ( C.QS_CL, QS_YA_SUO_WEI_JIN_GE,QingShanGongChang.QS_GONG_CHANG, new ItemStack[]{
@@ -242,19 +242,19 @@ public class QingShanCaiLiao {
             QS_WEI_JIN_GE, QS_WEI_JIN_GE, QS_WEI_JIN_GE,
             QS_WEI_JIN_GE, QS_WEI_JIN_GE, QS_WEI_JIN_GE
         }).register ( qs );
-        new UnplaceableBlock ( C.QS_CL, QS_ZHEN_JUN_PAO_MO , QingShanRT.QSWP, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_CL, QS_ZHEN_JUN_PAO_MO , RecipeType.NULL, new ItemStack[]{
             null, null, null,
-            null, new CustomItemStack( PlayerHead.getItemStack( PlayerSkin.fromHashCode( "a2ac9cbc5befca3a8007a6d0b54b626459d0d510203ea1563a09883a525a747c")), Y.colorPseudorandomString ("一头呆呆："), Y.colorPseudorandomString ( "尊敬勇士的请您 前往青山世界查看！")), null,
+            null, null, null,
             null, null, null
         }).register ( qs );
-        new UnplaceableBlock ( C.QS_CL, QS_NA_MI_TAN_WEI_SU , QingShanRT.QSWP, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_CL, QS_NA_MI_TAN_WEI_SU , RecipeType.NULL, new ItemStack[]{
             null, null, null,
-            null, new CustomItemStack( PlayerHead.getItemStack( PlayerSkin.fromHashCode( "a2ac9cbc5befca3a8007a6d0b54b626459d0d510203ea1563a09883a525a747c")), Y.colorPseudorandomString ("一头呆呆："), Y.colorPseudorandomString ( "尊敬勇士的请您 前往青山世界查看！")), null,
+            null, null, null,
             null, null, null
         }).register ( qs );
-        new UnplaceableBlock ( C.QS_CL, QS_GAI_TAI_KUANG , QingShanRT.QSWP, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_CL, QS_GAI_TAI_KUANG , RecipeType.NULL, new ItemStack[]{
             null, null, null,
-            null, new CustomItemStack( PlayerHead.getItemStack( PlayerSkin.fromHashCode( "a2ac9cbc5befca3a8007a6d0b54b626459d0d510203ea1563a09883a525a747c")), Y.colorPseudorandomString ("一头呆呆："), Y.colorPseudorandomString ( "尊敬勇士的请您 前往青山世界查看！")), null,
+            null, null, null,
             null, null, null
         }).register ( qs );
         new UnplaceableBlock ( C.QS_CL, QS_QING_SHAN_GAI_TAI_KUANG,QingShanGongChang.QS_GONG_CHANG, new ItemStack[]{
@@ -262,9 +262,9 @@ public class QingShanCaiLiao {
             QS_GAI_TAI_KUANG, QS_GAI_TAI_KUANG, QS_GAI_TAI_KUANG,
             QS_GAI_TAI_KUANG, QS_GAI_TAI_KUANG, QS_GAI_TAI_KUANG
         }).register ( qs );
-        new UnplaceableBlock ( C.QS_CL, QS_NA_MI_DIAN , QingShanRT.QSWP, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_CL, QS_NA_MI_DIAN , RecipeType.NULL, new ItemStack[]{
             null, null, null,
-            null, new CustomItemStack( PlayerHead.getItemStack( PlayerSkin.fromHashCode( "a2ac9cbc5befca3a8007a6d0b54b626459d0d510203ea1563a09883a525a747c")), Y.colorPseudorandomString ("一头呆呆："), Y.colorPseudorandomString ( "尊敬勇士的请您 前往青山世界查看！")), null,
+            null, null, null,
             null, null, null
         }).register ( qs );
         new UnplaceableBlock ( C.QS_CL, QS_QING_SHAN_NA_MI_DIAN,QingShanGongChang.QS_GONG_CHANG, new ItemStack[]{
@@ -292,19 +292,19 @@ public class QingShanCaiLiao {
             QS_JI_YAN_FEN_MO, QS_JI_YAN_FEN_MO, QS_JI_YAN_FEN_MO,
             QS_JI_YAN_FEN_MO, QS_JI_YAN_FEN_MO, QS_JI_YAN_FEN_MO
         }).register ( qs );
-        new UnplaceableBlock ( C.QS_CL, QS_JI_YAN_FEN_MO , QingShanRT.QSWP, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_CL, QS_JI_YAN_FEN_MO , RecipeType.NULL, new ItemStack[]{
             null, null, null,
-            null, new CustomItemStack( PlayerHead.getItemStack( PlayerSkin.fromHashCode( "a2ac9cbc5befca3a8007a6d0b54b626459d0d510203ea1563a09883a525a747c")), Y.colorPseudorandomString ("一头呆呆："), Y.colorPseudorandomString ( "尊敬勇士的请您 前往青山世界查看！")), null,
+            null, null, null,
             null, null, null
         }).register ( qs );
-        new UnplaceableBlock ( C.QS_CL, QS_JU_BIAN_HE_XIN_CUI_HUA_QI , QingShanRT.QSWP, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_CL, QS_JU_BIAN_HE_XIN_CUI_HUA_QI , RecipeType.NULL, new ItemStack[]{
             null, null, null,
-            null, new CustomItemStack( PlayerHead.getItemStack( PlayerSkin.fromHashCode( "a2ac9cbc5befca3a8007a6d0b54b626459d0d510203ea1563a09883a525a747c")), Y.colorPseudorandomString ("一头呆呆："), Y.colorPseudorandomString ( "尊敬勇士的请您 前往青山世界查看！")), null,
+            null, null, null,
             null, null, null
         }).register ( qs );
-        new UnplaceableBlock ( C.QS_CL, QS_ZI_JING_SHI , QingShanRT.QSWP, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_CL, QS_ZI_JING_SHI , RecipeType.NULL, new ItemStack[]{
             null, null, null,
-            null, new CustomItemStack( PlayerHead.getItemStack( PlayerSkin.fromHashCode( "a2ac9cbc5befca3a8007a6d0b54b626459d0d510203ea1563a09883a525a747c")), Y.colorPseudorandomString ("一头呆呆："), Y.colorPseudorandomString ( "尊敬勇士的请您 前往青山世界查看！")), null,
+            null, null, null,
             null, null, null
         }).register ( qs );
 
@@ -318,9 +318,9 @@ public class QingShanCaiLiao {
             QS_ZI_JING_SHI_ZHUANG, QS_ZI_JING_SHI_ZHUANG, QS_ZI_JING_SHI_ZHUANG,
             QS_ZI_JING_SHI_ZHUANG, QS_ZI_JING_SHI_ZHUANG, QS_ZI_JING_SHI_ZHUANG
         }).register ( qs );
-        new UnplaceableBlock ( C.QS_CL, QS_KE_JI_ZHI_XIN , QingShanRT.QSWP, new ItemStack[]{
+        new UnplaceableBlock ( C.QS_CL, QS_KE_JI_ZHI_XIN , RecipeType.NULL, new ItemStack[]{
             null, null, null,
-            null, new CustomItemStack( PlayerHead.getItemStack( PlayerSkin.fromHashCode( "a2ac9cbc5befca3a8007a6d0b54b626459d0d510203ea1563a09883a525a747c")), Y.colorPseudorandomString ("一头呆呆："), Y.colorPseudorandomString ( "尊敬勇士的请您 前往青山世界查看！")), null,
+            null, null, null,
             null, null, null
         }).register ( qs );
         new UnplaceableBlock ( C.QS_CL, QS_GAO_JIE_XIA_JIE,QingShanGongChang.QS_GONG_CHANG, new ItemStack[]{

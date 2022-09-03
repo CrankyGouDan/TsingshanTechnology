@@ -12,7 +12,7 @@ import lombok.Getter;
 public enum GenerationType {
 
 
-    PAOPAOFADIANJI("跑跑发电机")
+    PAOPAOFADIANJI("青山发电机")
     {
         @Override
         protected int generate(@Nonnull World world, @Nonnull Block block, int def) {
@@ -22,7 +22,7 @@ public enum GenerationType {
 
 
 
-    I_FADIANJI_FDL("?????") {
+    I_FADIANJI_FDL("青山发电机") {
         @Override
         protected int generate(@Nonnull World world, @Nonnull Block block, int def) {
             return def;

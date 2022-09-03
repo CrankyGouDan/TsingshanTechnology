@@ -1,5 +1,7 @@
 package io.gitee.crankygoudan.tsingshantechnology.zhuceleibiao.jiqizhuce.fadianjizhuce;
 
+import io.gitee.crankygoudan.tsingshantechnology.machines.duojiegoufangkuaijiqi.QingShanGongChang;
+
 import org.bukkit.inventory.ItemStack;
 
 import io.gitee.crankygoudan.tsingshantechnology.TsingshanTechnology;
@@ -20,7 +22,8 @@ import static io.gitee.crankygoudan.tsingshantechnology.zhuceleibiao.cailiaozhuc
 @UtilityClass
 public final class QingShanFaDianJi {
 
-    private static final int FULIFADIANJI_FDL = 40_000;
+    private static final int FULIFADIANJI_FDL = 1024;
+    private static final int FULIFADIANJI_CUD = 102400;
     private static final int PAOPAOFADIANJI_FDL = 50_000;
     private static final int FADIANJI_FDL_1 = 600000;
     private static final int FADIANJI_FDL_2 = 7500000;
@@ -33,21 +36,21 @@ public final class QingShanFaDianJi {
     public static final SlimefunItemStack QS_FU_LI_FA_DIAN_JI = new SlimefunItemStack (
         "QS_FU_LI_FA_DIAN_JI",
         T.QS_PAO_PAO_FA_DIAN_JI,
-        Y.colorPseudorandomString ("福利电机") + " " + Y.colorPseudorandomString(" "),
+        Y.colorPseudorandomString ("福利发电机") + " " + Y.colorPseudorandomString(" "),
         Y.colorPseudorandomString("   "),
         Y.colorPseudorandomString("良心腐竹给大家的福利"),
         Y.colorPseudorandomString("可在任意时间发电"),
         Y.colorPseudorandomString("太阳能发电机,需要露天"),
         Y.colorPseudorandomString("挖掘后较容易损坏"),
         Y.colorPseudorandomString("挖掘过造成损坏损失紫行承担"),
-        MachineLore.energyBuffer(FULIFADIANJI_FDL ),
+        MachineLore.energyBuffer(FULIFADIANJI_CUD),
         MachineLore.energyPerSecond(FULIFADIANJI_FDL)
     );
 
     public static final SlimefunItemStack QS_PAO_PAO_FA_DIAN_JI = new SlimefunItemStack (
         "QS_PAO_PAO_FA_DIAN_JI",
         T.QS_PAO_PAO_FA_DIAN_JI,
-        Y.colorPseudorandomString ("跑跑发电机") + " " + Y.colorPseudorandomString(" "),
+        Y.colorPseudorandomString ("中级发电机") + " " + Y.colorPseudorandomString(" "),
         Y.colorPseudorandomString("   "),
         Y.colorPseudorandomString("可在任意时间发电"),
         Y.colorPseudorandomString("太阳能发电机,需要露天"),
@@ -59,9 +62,8 @@ public final class QingShanFaDianJi {
     public static final SlimefunItemStack QS_I_FA_DIAN_JI = new SlimefunItemStack (
         "QS_I_FADIANJI_FDL",
         T.QS_PAO_PAO_FA_DIAN_JI,
-        Y.colorPseudorandomString ("帅气发电机") + " " + Y.colorPseudorandomString(" "),
+        Y.colorPseudorandomString ("高级发电机") + " " + Y.colorPseudorandomString(" "),
         Y.colorPseudorandomString("   "),
-        Y.colorPseudorandomString("利用你的帅气发电"),
         Y.colorPseudorandomString("可在任意时间发电"),
         Y.colorPseudorandomString("太阳能发电机,需要露天"),
         Y.colorPseudorandomString("挖掘后较容易损坏"),
@@ -156,9 +158,9 @@ public final class QingShanFaDianJi {
         }, FULIFADIANJI_FDL, GenerationType.PAOPAOFADIANJI).register(qs);
 
         new EnergyGenerator ( C.QS_FDJ, QS_PAO_PAO_FA_DIAN_JI, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
-            QS_SAN_JIE_YUAN_SU_JIE_JING, QS_SAN_JIE_YUAN_SU_JIE_JING, QS_SAN_JIE_YUAN_SU_JIE_JING,
+            QS_FU_LI_FA_DIAN_JI, QS_SAN_JIE_YUAN_SU_JIE_JING, QS_FU_LI_FA_DIAN_JI,
             QS_SAN_JIE_YUAN_SU_JIE_JING, QS_JI_YAN, QS_SAN_JIE_YUAN_SU_JIE_JING,
-            QS_SAN_JIE_YUAN_SU_JIE_JING, QS_SAN_JIE_YUAN_SU_JIE_JING, QS_SAN_JIE_YUAN_SU_JIE_JING
+            QS_FU_LI_FA_DIAN_JI, QS_SAN_JIE_YUAN_SU_JIE_JING, QS_FU_LI_FA_DIAN_JI
         }, PAOPAOFADIANJI_FDL, GenerationType.PAOPAOFADIANJI).register(qs);
 
         new EnergyGenerator ( C.QS_FDJ, QS_I_FA_DIAN_JI, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
@@ -180,27 +182,27 @@ public final class QingShanFaDianJi {
         }, FADIANJI_FDL_3, GenerationType.I_FADIANJI_FDL).register(qs);
 
         new EnergyGenerator ( C.QS_FDJ, QS_IIII_FA_DIAN_JI, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
-            QS_IIII_FA_DIAN_JI,QS_IIII_FA_DIAN_JI,QS_IIII_FA_DIAN_JI,
-            QS_IIII_FA_DIAN_JI,QS_KE_JI_ZHI_XIN,QS_IIII_FA_DIAN_JI,
-            QS_IIII_FA_DIAN_JI,QS_IIII_FA_DIAN_JI,QS_IIII_FA_DIAN_JI,
+            QS_III_FA_DIAN_JI,QS_III_FA_DIAN_JI,QS_III_FA_DIAN_JI,
+            QS_III_FA_DIAN_JI,QS_QING_SHAN_NA_MI_DIAN,QS_III_FA_DIAN_JI,
+            QS_III_FA_DIAN_JI,QS_III_FA_DIAN_JI,QS_III_FA_DIAN_JI,
         }, FADIANJI_FDL_4, GenerationType.I_FADIANJI_FDL).register(qs);
 
         new EnergyGenerator ( C.QS_FDJ, QS_VIP_FA_DIAN_JI, RecipeType.NULL, new ItemStack[]{
-            QS_QING_SHAN_SHUI_JING, QS_QING_SHAN_SHUI_JING, QS_QING_SHAN_SHUI_JING,
-            QS_QING_SHAN_SHUI_JING, QS_QING_SHAN_SHUI_JING, QS_QING_SHAN_SHUI_JING,
-            QS_QING_SHAN_SHUI_JING, QS_QING_SHAN_SHUI_JING, QS_QING_SHAN_SHUI_JING,
+            null, null, null,
+            null, null, null,
+            null, null, null
         }, FADIANJI_FDL_5, GenerationType.I_FADIANJI_FDL).register(qs);
 
         new EnergyGenerator ( C.QS_FDJ, QS_MVP_FA_DIAN_JI, RecipeType.NULL, new ItemStack[]{
-            QS_QING_SHAN_SHUI_JING, QS_QING_SHAN_SHUI_JING, QS_QING_SHAN_SHUI_JING,
-            QS_QING_SHAN_SHUI_JING, QS_QING_SHAN_SHUI_JING, QS_QING_SHAN_SHUI_JING,
-            QS_QING_SHAN_SHUI_JING, QS_QING_SHAN_SHUI_JING, QS_QING_SHAN_SHUI_JING,
+            null, null, null,
+            null, null, null,
+            null, null, null
         }, FADIANJI_FDL_6, GenerationType.I_FADIANJI_FDL).register(qs);
 
         new EnergyGenerator ( C.QS_FDJ, QS_PRO_FA_DIAN_JI, RecipeType.NULL, new ItemStack[]{
-            QS_QING_SHAN_SHUI_JING, QS_QING_SHAN_SHUI_JING, QS_QING_SHAN_SHUI_JING,
-            QS_QING_SHAN_SHUI_JING, QS_QING_SHAN_SHUI_JING, QS_QING_SHAN_SHUI_JING,
-            QS_QING_SHAN_SHUI_JING, QS_QING_SHAN_SHUI_JING, QS_QING_SHAN_SHUI_JING,
+            null, null, null,
+            null, null, null,
+            null, null, null
         }, FADIANJI_FDL_6, GenerationType.I_FADIANJI_FDL).register(qs);
 
 
